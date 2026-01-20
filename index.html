@@ -583,18 +583,33 @@ function finishQuiz() {
   document.getElementById("percentCircle").innerText = `${percent}%`;
 
   const answerList = document.getElementById("answerList");
-answerList.innerHTML = "<h3>Correct Answers</h3>";
+  answerList.innerHTML = "<h3>Review Answers</h3>";
 
-questions.forEach((q, index) => {
-  const letter = q.a;
-  const correct = q.o[letter.charCodeAt(0) - 65];
+  questions.forEach((q, index) => {
+    const studentAns = answers[index] || "Not answered";
+    const correctLetter = q.a;
+    const correctAns = q.o[correctLetter.charCodeAt(0) - 65];
 
-  answerList.innerHTML += `
-    <p><strong>Q${index + 1}.</strong> ${q.q}</p>
-    <p>Answer: ${correct} - ${letter}</p>
-    <hr>
-  `;
-});
+    const studentAnswerText =
+      studentAns === "Not answered"
+        ? "Not answered"
+        : q.o[studentAns.charCodeAt(0) - 65];
+
+    if (studentAns === correctLetter) {
+      answerList.innerHTML += `
+        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
+        <p>Answer: (${studentAnswerText}) - ${studentAns}. <span>Correct ✅</span></p>
+        <hr>
+      `;
+    } else {
+      answerList.innerHTML += `
+        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
+        <p>Answer: (${studentAnswerText}) - ${studentAns}. <span>Wrong ❌</span></p>
+        <p>Correct Answer: (${correctAns}) - ${correctLetter}</p>
+        <hr>
+      `;
+    }
+  });
 
   showPage("result");
 }
