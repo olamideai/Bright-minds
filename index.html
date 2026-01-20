@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bright Minds - Exam Practice</title>
+<style>
+  :root{
+    --primary:#1a73e8;
+    --neon:#00e5ff;
+    --bg:#050b16;
+    --card:#0b1020;
+    --text:#e8f1ff;
+    --muted:#a8b6d6;
+    --shadow:0 15px 40px rgba(0,0,0,0.45);
+    --radius:20px;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0a1b3a, #050b16);
+    color:var(--text);
+  }
+
+  .container{
+    max-width: 980px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .card{
+    background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border:1px solid rgba(0,255,255,0.15);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding: 25px;
+  }
+
+  h1, h2{
+    margin:0 0 10px;
+    letter-spacing: 1px;
+  }
+
+  .center{
+    text-align:center;
+  }
+
+  .full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    min-height: 70vh;
+  }
+
+  .btn{
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--neon);
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:700;
+    transition: transform .2s, background .2s;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
+  }
+  .btn:hover{
+    transform: translateY(-3px);
+    background: rgba(0,229,255,0.12);
+  }
+  .btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+  }
+
+  .input{
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid rgba(0,229,255,0.35);
+    background: rgba(0,0,0,0.35);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+  }
+  .input:focus{
+    border-color: var(--neon);
+    box-shadow: 0 0 12px rgba(0,229,255,0.25);
+  }
+
+  .subjects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:20px;
+  }
+
+  .subject-btn{
+    background: transparent;
+    color: var(--text);
+    border: 2px solid rgba(0,229,255,0.25);
+    padding:18px;
+    border-radius:14px;
+    font-size:16px;
+    cursor:pointer;
+    transition: transform .2s, background .2s;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+  }
+  .subject-btn:hover{
+    transform: translateY(-3px);
+    background: rgba(0,229,255,0.10);
+  }
+  .subject-btn.selected{
+    background: rgba(0,229,255,0.25);
+    border-color: var(--neon);
+  }
+
+  .quiz{
+    margin-top:20px;
+  }
+  .question{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .options{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .option{
+    border:2px solid rgba(255,255,255,0.10);
+    border-radius:14px;
+    padding:14px;
+    cursor:pointer;
+    transition:0.2s;
+    background: rgba(0,0,0,0.3);
+  }
+  .option:hover{
+    border-color:var(--neon);
+    background: rgba(0,229,255,0.12);
+  }
+  .option.selected{
+    background: rgba(0,229,255,0.20);
+    border-color:var(--neon);
+  }
+
+  .timer{
+    font-weight:700;
+    color:var(--neon);
+  }
+
+  .btn-group{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  .result-circle{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border: 8px solid rgba(0,229,255,0.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px auto;
+    font-size:22px;
+    font-weight:700;
+  }
+
+  .result-circles{
+    display:flex;
+    justify-content:center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hide{display:none;}
+
+  @media(max-width: 900px){
+    .subjects{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width: 600px){
+    .subjects{grid-template-columns:1fr;}
+  }
+
+  .result-list{
+    margin-top: 20px;
+    border: 1px solid rgba(0,229,255,0.15);
+    padding: 16px;
+    border-radius: 14px;
+    background: rgba(0,0,0,0.25);
+  }
+
+  .result-list p{
+    margin: 8px 0;
+  }
+  .review-container {
+  max-height: 380px; /* Adjust this as you like */
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HOME PAGE -->
+  <div id="home" class="card">
+    <div class="full-center">
+      <h1>Exam Practice Question</h1>
+      <button class="btn" onclick="showPage('namePage')">Start Test</button>
+    </div>
+  </div>
+
+  <!-- NAME PAGE -->
+  <div id="namePage" class="card hide">
+    <h2>Enter Your Name</h2>
+    <input id="nameInput" class="input" placeholder="Enter your name" />
+    <div style="margin-top: 15px;">
+      <button class="btn" onclick="saveName()">Continue</button>
+      <button class="btn" style="margin-left: 10px;" onclick="goHome()">Back</button>
+    </div>
+  </div>
+
+  <!-- SUBJECT SELECTION PAGE -->
+  <div id="subjectPage" class="card hide">
+    <h2>Select Subject</h2>
+    <p class="muted">Choose one subject only.</p>
+    <div class="subjects">
+      <button class="subject-btn" onclick="selectSubject('MTH 101')">MTH 101</button>
+      <button class="subject-btn" onclick="selectSubject('PHY 101')">PHY 101</button>
+      <button class="subject-btn" onclick="selectSubject('CHM 101')">CHM 101</button>
+      <button class="subject-btn" onclick="selectSubject('BIO 101')">BIO 101</button>
+      <button class="subject-btn" onclick="selectSubject('COS 101')">COS 101</button>
+      <button class="subject-btn" onclick="selectSubject('PHY 107')">PHY 107</button>
+      <button class="subject-btn" onclick="selectSubject('GNS 113')">GNS 113</button>
+      <button class="subject-btn" onclick="selectSubject('GST 111')">GST 111</button>
+    </div>
+    <div style="margin-top: 20px;">
+      <button class="btn" onclick="startQuiz()">Start Quiz</button>
+      <button class="btn" style="margin-left: 10px;" onclick="showPage('namePage')">Back</button>
+    </div>
+  </div>
+
+  <!-- QUIZ PAGE -->
+  <div id="quiz" class="card hide">
+    <div class="quiz">
+      <div style="display:flex; justify-content: space-between; align-items:center;">
+        <h2 id="subjectTitle">COURSE</h2>
+        <span class="timer" id="timer">00:00</span>
+      </div>
+      <div class="question" id="questionText">Question</div>
+      <div class="options" id="options"></div>
+
+      <div class="btn-group">
+        <button class="btn" id="prevBtn" onclick="prevQuestion()">Previous</button>
+        <button class="btn" id="nextBtn" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT PAGE -->
+  <div id="result" class="card hide">
+    <h2>Result</h2>
+    <p id="resultName">Name: </p>
+    <p id="resultSubject">Subject: </p>
+
+    <div class="result-circles">
+      <div class="result-circle" id="scoreCircle">0</div>
+      <div class="result-circle" id="percentCircle">0%</div>
+    </div>
+
+    <div class="result-list" id="answerList"></div>
+    <div class="review-container">
+  <!-- Your review answers list goes here -->
+</div>
+
+    <div style="margin-top: 20px;">
+      <button class="btn" onclick="goHome()">Back to Home</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let currentSubject = null;
+let currentIndex = 0;
+let answers = {};
+let timerInterval;
+let timeLeft = 0;
+let studentName = "";
+
+// Example question set (You can update later)
+const QUESTIONS = {
+  "BIO 101": [
+    { q: "Which organ produces insulin?", o: ["Liver", "Pancreas", "Kidney", "Heart"], a: "B" },
+    { q: "What is the basic unit of life?", o: ["Cell", "Atom", "Molecule", "Tissue"], a: "A" }
+  ]
+};
+
+// --------------------------
+// SHOW / HIDE PAGES
+// --------------------------
+function hideAllPages() {
+  document.getElementById("home").classList.add("hide");
+  document.getElementById("namePage").classList.add("hide");
+  document.getElementById("subjectPage").classList.add("hide");
+  document.getElementById("quiz").classList.add("hide");
+  document.getElementById("result").classList.add("hide");
+}
+
+function showPage(pageId) {
+  hideAllPages();
+  document.getElementById(pageId).classList.remove("hide");
+}
+
+// --------------------------
+// FLOW
+// --------------------------
+function goHome() {
+  clearInterval(timerInterval);
+  showPage("home");
+}
+
+function saveName() {
+  const name = document.getElementById("nameInput").value.trim();
+  if (!name) {
+    alert("Please enter your name.");
+    return;
+  }
+  studentName = name;
+  showPage("subjectPage");
+}
+
+function selectSubject(subject) {
+  currentSubject = subject;
+
+  document.querySelectorAll(".subject-btn").forEach(btn => {
+    btn.classList.remove("selected");
+  });
+
+  event.target.classList.add("selected");
+}
+
+function startQuiz() {
+  if (!studentName) {
+    alert("Please enter your name first.");
+    showPage("namePage");
+    return;
+  }
+
+  if (!currentSubject) {
+    alert("Please select a subject.");
+    return;
+  }
+
+  const questions = QUESTIONS[currentSubject];
+  if (!questions || questions.length === 0) {
+    alert("No questions available for this course at the moment.");
+    return;
+  }
+
+  currentIndex = 0;
+  answers = {};
+  timeLeft = (currentSubject === "MTH 101") ? 1200 : 900;
+
+  document.getElementById("subjectTitle").innerText = currentSubject;
+  showPage("quiz");
+  startTimer();
+  loadQuestion();
+}
+
+// --------------------------
+// TIMER
+// --------------------------
+function startTimer() {
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+    const seconds = String(timeLeft % 60).padStart(2, '0');
+    document.getElementById("timer").innerText = `${minutes}:${seconds}`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      finishQuiz();
+    }
+  }, 1000);
+}
+
+// --------------------------
+// QUESTIONS
+// --------------------------
+function loadQuestion() {
+  const questions = QUESTIONS[currentSubject];
+  const q = questions[currentIndex];
+
+  document.getElementById("questionText").innerText = q.q;
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.o.forEach((opt, index) => {
+    const letter = String.fromCharCode(65 + index);
+    const optionEl = document.createElement("div");
+    optionEl.className = "option";
+    optionEl.innerText = `${letter}. ${opt}`;
+
+    if (answers[currentIndex] === letter) {
+      optionEl.classList.add("selected");
+    }
+
+    optionEl.onclick = () => {
+      answers[currentIndex] = letter;
+      loadQuestion();
+    };
+
+    optionsDiv.appendChild(optionEl);
+  });
+
+  document.getElementById("prevBtn").disabled = currentIndex === 0;
+  document.getElementById("nextBtn").innerText = currentIndex === questions.length - 1 ? "Submit" : "Next";
+}
+
+function prevQuestion() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    loadQuestion();
+  }
+}
+
+function nextQuestion() {
+  const questions = QUESTIONS[currentSubject];
+  if (currentIndex < questions.length - 1) {
+    currentIndex++;
+    loadQuestion();
+  } else {
+    finishQuiz();
+  }
+}
+
+// --------------------------
+// RESULT
+// --------------------------
+function finishQuiz() {
+  clearInterval(timerInterval);
+
+  const questions = QUESTIONS[currentSubject];
+  let score = 0;
+
+  questions.forEach((q, index) => {
+    if (answers[index] === q.a) score++;
+  });
+
+  const percent = Math.round((score / questions.length) * 100);
+
+  document.getElementById("resultName").innerText = `Name: ${studentName}`;
+  document.getElementById("resultSubject").innerText = `Subject: ${currentSubject}`;
+  document.getElementById("scoreCircle").innerText = `${score}/${questions.length}`;
+  document.getElementById("percentCircle").innerText = `${percent}%`;
+
+  const answerList = document.getElementById("answerList");
+answerList.innerHTML = "<h3>Correct Answers</h3>";
+
+questions.forEach((q, index) => {
+  const letter = q.a;
+  const correct = q.o[letter.charCodeAt(0) - 65];
+
+  answerList.innerHTML += `
+    <p><strong>Q${index + 1}.</strong> ${q.q}</p>
+    <p>Answer: ${correct} - ${letter}</p>
+    <hr>
+  `;
+});
+
+  showPage("result");
+}
+</script>
+</body>
+</html>
