@@ -259,6 +259,7 @@
         <h2 id="subjectTitle">COURSE</h2>
         <span class="timer" id="timer">00:00</span>
       </div>
+      <p id="questionNumber"></p>
       <div class="question" id="questionText">Question</div>
       <div class="options" id="options"></div>
 
@@ -305,7 +306,59 @@ const QUESTIONS = {
   "BIO 101": [
     { q: "Which organ produces insulin?", o: ["Liver", "Pancreas", "Kidney", "Heart"], a: "B" },
     { q: "What is the basic unit of life?", o: ["Cell", "Atom", "Molecule", "Tissue"], a: "A" }
-  ]
+  ],
+  "PHY 101": [
+  { q: "Which of the following is a fundamental physical quantity?", o: ["Force", "Velocity", "Mass", "Pressure"], a: "C" },
+  { q: "The SI unit of force is", o: ["Joule", "Watt", "Newton", "Pascal"], a: "C" },
+  { q: "Which of the following quantities is dimensionless?", o: ["Density", "Strain", "Pressure", "Acceleration"], a: "B" },
+  { q: "The dimensional formula of velocity is", o: ["[LT⁻¹]", "[LT⁻²]", "[MLT⁻¹]", "[L²T⁻¹]"], a: "A" },
+  { q: "A vector quantity has", o: ["magnitude only", "direction only", "magnitude and direction", "neither magnitude nor direction"], a: "C" },
+  { q: "Which of the following is a scalar quantity?", o: ["Displacement", "Velocity", "Acceleration", "Speed"], a: "D" },
+  { q: "The slope of a displacement–time graph represents", o: ["acceleration", "velocity", "distance", "momentum"], a: "B" },
+  { q: "The area under a velocity–time graph gives", o: ["acceleration", "speed", "displacement", "force"], a: "C" },
+  { q: "Work is said to be done when a force causes", o: ["heat", "motion", "pressure", "friction"], a: "B" },
+  { q: "The SI unit of work is", o: ["Newton", "Joule", "Watt", "Pascal"], a: "B" },
+  { q: "Kinetic energy depends on", o: ["mass only", "velocity only", "mass and velocity", "force and distance"], a: "C" },
+  { q: "Potential energy due to gravity depends on", o: ["mass and height", "mass and speed", "force and time", "height and velocity"], a: "A" },
+  { q: "Motion of a body along a circular path at constant speed is called", o: ["linear motion", "oscillatory motion", "uniform circular motion", "random motion"], a: "C" },
+  { q: "The force acting on a body in circular motion is directed towards the", o: ["center", "tangent", "surface", "outside"], a: "A" },
+  { q: "This force is known as", o: ["gravitational force", "frictional force", "centripetal force", "centrifugal force"], a: "C" },
+  { q: "The angular velocity of a body in circular motion is measured in", o: ["m/s", "rad/s", "m/s²", "rad"], a: "B" },
+  { q: "Simple harmonic motion is a motion in which the restoring force is", o: ["constant", "zero", "proportional to displacement", "proportional to velocity"], a: "C" },
+  { q: "Which of the following executes simple harmonic motion?", o: ["A falling stone", "A vibrating tuning fork", "A moving car", "Flowing water"], a: "B" },
+  { q: "The time taken for one complete oscillation is called", o: ["frequency", "amplitude", "period", "wavelength"], a: "C" },
+  { q: "The SI unit of frequency is", o: ["second", "hertz", "radian", "joule"], a: "B" },
+  { q: "A rigid body is one in which the distance between particles remains", o: ["variable", "zero", "constant", "infinite"], a: "C" },
+  { q: "The turning effect of a force is known as", o: ["momentum", "work", "torque", "energy"], a: "C" },
+  { q: "Torque is the product of", o: ["force and velocity", "force and distance from pivot", "mass and acceleration", "pressure and area"], a: "B" },
+  { q: "The SI unit of torque is", o: ["Nm", "J", "W", "kgm²"], a: "A" },
+  { q: "The point about which a body rotates is called", o: ["center of mass", "pivot", "centroid", "axis"], a: "D" },
+  { q: "The moment of inertia depends on", o: ["mass only", "shape only", "mass distribution", "velocity"], a: "C" },
+  { q: "Matter is made up of", o: ["waves", "molecules", "energy", "force"], a: "B" },
+  { q: "Elasticity is the ability of a material to", o: ["conduct heat", "change color", "regain original shape", "break easily"], a: "C" },
+  { q: "Hooke’s law states that stress is proportional to", o: ["force", "strain", "pressure", "energy"], a: "B" },
+  { q: "The SI unit of stress is", o: ["N", "Nm", "N/m²", "kg"], a: "C" },
+  { q: "Which property explains why liquids flow?", o: ["Elasticity", "Viscosity", "Plasticity", "Rigidity"], a: "B" },
+  { q: "Surface tension is measured in", o: ["N", "N/m", "J", "kg/m³"], a: "B" },
+  { q: "Heat is a form of", o: ["matter", "force", "energy", "mass"], a: "C" },
+  { q: "The SI unit of heat is", o: ["calorie", "joule", "watt", "kelvin"], a: "B" },
+  { q: "Temperature is a measure of", o: ["total heat", "average kinetic energy", "total energy", "internal energy"], a: "B" },
+  { q: "The SI unit of temperature is", o: ["Celsius", "Fahrenheit", "Kelvin", "Joule"], a: "C" },
+  { q: "Heat transfer by direct contact is called", o: ["radiation", "convection", "conduction", "evaporation"], a: "C" },
+  { q: "The first law of thermodynamics is a statement of conservation of", o: ["mass", "momentum", "energy", "force"], a: "C" },
+  { q: "A thermodynamic system that exchanges energy but not matter is", o: ["isolated", "closed", "open", "adiabatic"], a: "B" },
+  { q: "Boyle’s law states that pressure is inversely proportional to", o: ["temperature", "mass", "volume", "density"], a: "C" },
+  { q: "Charles’ law relates volume and", o: ["pressure", "mass", "temperature", "density"], a: "C" },
+  { q: "The SI unit of pressure is", o: ["bar", "atmosphere", "pascal", "mmHg"], a: "C" },
+  { q: "Which gas law combines Boyle’s and Charles’ laws?", o: ["Dalton’s law", "Ideal gas law", "Graham’s law", "Avogadro’s law"], a: "B" },
+  { q: "The equation of state of an ideal gas is", o: ["PV = T", "PV = nRT", "P = V/T", "V = nR"], a: "B" },
+  { q: "Absolute zero temperature is", o: ["0°C", "−100°C", "−273°C", "273°C"], a: "C" },
+  { q: "At constant pressure, increase in temperature causes volume to", o: ["decrease", "remain constant", "increase", "disappear"], a: "C" },
+  { q: "The number of molecules in a gas depends on", o: ["pressure only", "volume only", "temperature only", "amount of gas"], a: "D" },
+  { q: "Real gases deviate from ideal behavior at", o: ["high temperature and low pressure", "low temperature and high pressure", "room temperature", "constant volume"], a: "B" },
+  { q: "Avogadro’s law states that equal volumes of gases at the same temperature and pressure contain", o: ["equal masses", "equal densities", "equal number of molecules", "equal energies"], a: "C" },
+  { q: "Which instrument is used to measure gas pressure?", o: ["Thermometer", "Barometer", "Hygrometer", "Calorimeter"], a: "B" }
+],
 };
 
 // --------------------------
@@ -404,6 +457,9 @@ function startTimer() {
 function loadQuestion() {
   const questions = QUESTIONS[currentSubject];
   const q = questions[currentIndex];
+
+  document.getElementById("questionNumber").innerText = `Question ${currentIndex + 1} / ${questions.length}`;
+
 
   document.getElementById("questionText").innerText = q.q;
   const optionsDiv = document.getElementById("options");
