@@ -600,8 +600,9 @@ function nextQuestion() {
 // RESULT
 // --------------------------
 function finishQuiz() {
-  clearInterval(timerInterval);
   localStorage.removeItem("quizState");
+  clearInterval(timerInterval);
+  
 
   const questions = QUESTIONS[currentSubject];
   let score = 0;
