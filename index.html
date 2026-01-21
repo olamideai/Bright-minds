@@ -443,6 +443,35 @@ function goHome() {
   showPage("home");
 }
 
+function saveQuizState() {
+  const state = {
+    studentName,
+    currentSubject,
+    currentIndex,
+    answers,
+    timeLeft
+  };
+  localStorage.setItem("quizState", JSON.stringify(state));
+  }
+
+window.onload = () => {
+  const savedState = localStorage.getItem("quizState");
+  if (!savedState) return;
+
+  const state = JSON.parse(savedState);
+
+  studentName = state.studentName;
+  currentSubject = state.currentSubject;
+  currentIndex = state.currentIndex;
+  answers = state.answers;
+  timeLeft = state.timeLeft;
+
+  document.getElementById("subjectTitle").innerText = currentSubject;
+  showPage("quiz");
+  startTimer();
+  loadQuestion();
+};
+  
 function saveName() {
   const name = document.getElementById("nameInput").value.trim();
   if (!name) {
@@ -535,6 +564,7 @@ function loadQuestion() {
 
     optionEl.onclick = () => {
       answers[currentIndex] = letter;
+      saveQuizState();
       loadQuestion();
     };
 
@@ -548,6 +578,7 @@ function loadQuestion() {
 function prevQuestion() {
   if (currentIndex > 0) {
     currentIndex--;
+    saveQuizState();
     loadQuestion();
   }
 }
@@ -556,6 +587,7 @@ function nextQuestion() {
   const questions = QUESTIONS[currentSubject];
   if (currentIndex < questions.length - 1) {
     currentIndex++;
+    saveQuizState();
     loadQuestion();
   } else {
     finishQuiz();
