@@ -217,6 +217,19 @@
   color: #c62828; /* red */
   font-weight: bold;
 }
+  .back-home-btn {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.back-home-btn:hover {
+  background: #ddd;
+    }
 </style>
 </head>
 
@@ -278,6 +291,9 @@
       <div class="btn-group">
         <button class="btn" id="prevBtn" onclick="prevQuestion()">Previous</button>
         <button class="btn" id="nextBtn" onclick="nextQuestion()">Next</button>
+        <button id="backHomeBtn" onclick="goHome()" class="back-home-btn">
+  ⬅ Back to Home
+        </button>
       </div>
     </div>
   </div>
@@ -1339,6 +1355,13 @@ function loadQuestion() {
   document.getElementById("nextBtn").innerText = currentIndex === questions.length - 1 ? "Submit" : "Next";
 }
 
+function goHome() {
+  if (confirm("Are you sure you want to go back home? Your quiz progress will be lost.")) {
+    localStorage.removeItem("quizState"); // optional but recommended
+    showPage("home"); // or whatever your home page id is
+  }
+  }
+  
 function prevQuestion() {
   if (currentIndex > 0) {
     currentIndex--;
