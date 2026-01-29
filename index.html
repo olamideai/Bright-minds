@@ -259,6 +259,7 @@
     <h2>Select Subject</h2>
     <p class="muted">Choose one subject only.</p>
     <div class="subjects">
+      <button class="subject-btn" onclick="selectSubject('BIO 101(4)')">BIO 101 (4)</button>
       <button class="subject-btn" onclick="selectSubject('BIO 101(3)')">BIO 101(3)</button>
       <button class="subject-btn" onclick="selectSubject('BIO 101,2')">BIO 101 (2)</button>
       <button class="subject-btn" onclick="selectSubject('MTH 101')">MTH 101</button>
@@ -332,6 +333,52 @@ let studentName = "";
 
 // Example question set (You can update later)
 const QUESTIONS = {
+
+
+
+  
+  "BIO 101(4)": [
+    { q: "Who is known as the 'Father of Taxonomy'?", o: ["Carl Linnaeus", "Charles Darwin", "Robert Whittaker", "Gregor Mendel"], a: "A" },
+    { q: "Which system of classification was proposed by R.H. Whittaker in 1969?", o: ["Five-Kingdom System", "Three-Domain System", "Phylogenetic System", "Two-Kingdom System"], a: "A" },
+    { q: "The hierarchy of classification from broadest to most specific is:", o: ["Kingdom, Phylum, Class, Order, Family, Genus, Species", "Species, Genus, Family, Order, Class, Phylum, Kingdom", "Kingdom, Class, Phylum, Order, Genus, Family, Species", "Kingdom, Phylum, Order, Class, Family, Genus, Species"], a: "A" },
+    { q: "In binomial nomenclature, the first part of the name represents the:", o: ["Genus", "Species", "Order", "Family"], a: "A" },
+    { q: "Why is Latin used for scientific naming?", o: ["It is a 'dead' language, so meanings remain stable and universal.", "It is the easiest language to learn.", "Linnaeus was an ancient Roman.", "Most scientists in the 21st century speak Latin."], a: "A" },
+    { q: "If two organisms belong to the same Order, they MUST also belong to the same:", o: ["Class", "Family", "Genus", "Species"], a: "A" },
+    { q: "Carl Woese introduced the 'Three-Domain System' based on differences in:", o: ["Ribosomal RNA (rRNA) sequences", "Physical size", "Ability to move", "Habitat"], a: "A" },
+    { q: "Which of the following is written correctly in Binomial Nomenclature?", o: ["Homo sapiens", "homo Sapiens", "Homo Sapiens", "HOMO SAPIENS"], a: "A" },
+    { q: "A group of individuals that can interbreed and produce fertile offspring is a:", o: ["Species", "Genus", "Family", "Order"], a: "A" },
+    { q: "In plant classification, the term 'Division' is used instead of which animal classification rank?", o: ["Phylum", "Class", "Order", "Family"], a: "A" },
+    { q: "Which kingdom consists of prokaryotic, unicellular organisms?", o: ["Monera", "Protista", "Fungi", "Plantae"], a: "A" },
+    { q: "Organisms that derive nutrition from dead and decaying organic matter are:", o: ["Saprophytes", "Autotrophs", "Holozoic", "Parasites"], a: "A" },
+    { q: "What is the primary component of the cell wall in Kingdom Fungi?", o: ["Chitin", "Cellulose", "Peptidoglycan", "Glycogen"], a: "A" },
+    { q: "Which kingdom acts as a 'misfit' category for unicellular eukaryotes like Amoeba?", o: ["Protista", "Monera", "Fungi", "Animalia"], a: "A" },
+    { q: "Which kingdom is entirely heterotrophic and lacks cell walls?", o: ["Animalia", "Plantae", "Fungi", "Monera"], a: "A" },
+    { q: "\"Extremophiles\" that live in boiling vents or salt lakes belong to which domain?", o: ["Archaea", "Bacteria", "Eukarya", "Protozoa"], a: "A" },
+    { q: "What is the cell wall of true bacteria (Eubacteria) made of?", o: ["Peptidoglycan", "Chitin", "Cellulose", "Silica"], a: "A" },
+    { q: "Which of the following is a unicellular fungus?", o: ["Yeast", "Mold", "Mushroom", "Lichen"], a: "A" },
+    { q: "Which kingdom is characterized by being multicellular autotrophs?", o: ["Plantae", "Animalia", "Fungi", "Protista"], a: "A" },
+    { q: "The Seven Characteristics of Life can be remembered by the mnemonic:", o: ["MRS GREN", "KING PHYLUM", "SMART GOALS", "CELL THEORY"], a: "A" },
+    { q: "Apomixis is best described as:", o: ["Asexual reproduction that mimics sexual reproduction by producing seeds.", "Sexual reproduction in animals.", "The fusion of male and female gametes.", "The movement of pollen from one flower to another."], a: "A" },
+    { q: "Which of these is a common example of an apomictic plant?", o: ["Dandelion", "Apple tree", "Pine tree", "Rose"], a: "A" },
+    { q: "\"Apospory\" refers to the embryo developing from:", o: ["Somatic cells of the ovule (like the nucellus)", "A fertilized egg", "The Megaspore Mother Cell", "Pollen grains"], a: "A" },
+    { q: "What is the main advantage of apomixis in farming?", o: ["It allows the preservation of \"hybrid vigor\" across generations.", "It increases genetic variety.", "It makes seeds much larger.", "It prevents the plant from growing weeds."], a: "A" },
+    { q: "\"Polyembryony\" (multiple embryos in one seed) is commonly found in:", o: ["Citrus fruits", "Wheat", "Beans", "Grass"], a: "A" },
+    { q: "In non-recurrent apomixis, the resulting embryo is usually:", o: ["Diploid (2n)", "Triploid (3n)", "Haploid (n) and sterile", "Tetraploid (4n)"], a: "A" },
+    { q: "Vegetative apomixis involves the production of:", o: ["Bulbils or vegetative buds", "Pollen", "Flowers", "Roots"], a: "A" },
+    { q: "\"Diplospory\" involves the embryo sac developing from:", o: ["The megaspore mother cell without meiosis", "The nucellus", "The integuments", "The sperm cell"], a: "A" },
+    { q: "Plants that can reproduce both sexually and through apomixis are called:", o: ["Facultative apomicts", "Obligate apomicts", "Sterile apomicts", "Hybrid apomicts"], a: "A" },
+    { q: "Why is apomixis considered \"cloning\"?", o: ["Because offspring are genetically identical to the mother plant.", "Because it involves lab equipment.", "Because it requires two parents.", "Because it only happens in animals."], a: "A" },
+    { q: "Dolly the Sheep was the first mammal cloned from:", o: ["Adult somatic cell", "An embryonic cell", "A sperm cell", "A stem cell"], a: "A" },
+    { q: "The process used to create Dolly is called:", o: ["Somatic Cell Nuclear Transfer (SCNT)", "In-vitro Fertilization (IVF)", "Natural Selection", "Fermentation"], a: "A" },
+    { q: "To clone Dolly, the nucleus of the donor cell was placed into:", o: ["An enucleated egg cell (egg with its own nucleus removed)", "A complete egg cell", "A sperm cell", "A skin cell"], a: "A" },
+    { q: "What \"sparked\" the fused cell to begin dividing into an embryo?", o: ["A tiny electric pulse", "Sunlight", "Chemical fertilizer", "Heat"], a: "A" },
+    { q: "Dolly was genetically identical to:", o: ["The sheep that provided the mammary cell nucleus", "The sheep that provided the egg", "The surrogate mother sheep", "A mix of all three sheep"], a: "A" },
+    { q: "Why was Dolly's birth scientifically significant?", o: ["It proved that adult specialized cells could be \"reprogrammed.\"", "It was the first time a sheep was born in Scotland.", "It proved that sheep can live forever.", "It was the first time DNA was discovered."], a: "A" },
+    { q: "How many \"mothers\" were involved in the creation of Dolly?", o: ["Three (Nucleus donor, Egg donor, Surrogate)", "One", "Two", "None"], a: "A" },
+    { q: "Which characteristic of life is demonstrated by the cloning process?", o: ["Reproduction", "Respiration", "Excretion", "Movement"], a: "A" },
+    { q: "Mammals do not naturally undergo apomixis. What is the closest natural equivalent in animals?", o: ["Parthenogenesis (found in some bees/reptiles)", "Hibernation", "Metamorphosis", "Digestion"], a: "A" },
+    { q: "If an organism is an \"obligate\" apomict, its population will have:", o: ["Low genetic diversity (mostly clones)", "High genetic diversity", "No DNA", "Only male offspring"], a: "A" }
+  ],
 
 
   "BIO 101(3)": [
