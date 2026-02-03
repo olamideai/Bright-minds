@@ -1273,6 +1273,26 @@ document.getElementById("backResultBtn").onclick = () => showPage("result");
 /* ===============================
    17. APP BOOTSTRAP
 ================================ */
-loadProgress();
-showPage("home");
+function bootstrap() {
+  const data = JSON.parse(localStorage.getItem("quizState"));
+  if (data && !data.quizCompleted) {
+    if (confirm("Resume previous quiz?")) {
+      studentName = data.studentName;
+      currentSubject = data.currentSubject;
+      currentIndex = data.currentIndex;
+      answers = data.answers;
+      timeLeft = data.timeLeft;
+      questions = QUESTION_BANK[currentSubject];
+
+      startTimer();
+      renderQuestion();
+      showPage("quiz");
+      return; // Exit so we don't show home page
+    }
+  }
+  // Show home if no quiz saved or user cancels
+  showPage("home");
+}
+
+bootstrap();
    
