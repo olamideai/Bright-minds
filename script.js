@@ -1038,7 +1038,7 @@ function loadSubjects() {
     const btn = document.createElement("button");
     btn.className = "btn";
     btn.textContent = sub;
-    btn.onclick = () => selectSubject(sub);
+    btn.onclick = (e) => selectSubject(sub, e);
     subjectList.appendChild(btn);
   });
 }
@@ -1046,7 +1046,7 @@ function loadSubjects() {
 /* ===============================
    6. SUBJECT SELECTION
 ================================ */
-function selectSubject(subject) {
+function selectSubject(subject, event) {
   currentSubject = subject;
   document.querySelectorAll("#subjectList .btn").forEach(b => b.classList.remove("selected"));
   event.target.classList.add("selected");
@@ -1248,33 +1248,42 @@ function loadProgress() {
 /* ===============================
    16. EVENT LISTENERS
 ================================ */
-document.getElementById("startBtn").onclick = () => showPage("name");
-document.getElementById("continueBtn").onclick = () => {
-  studentName = document.getElementById("nameInput").value.trim();
-  if (!studentName) return alert("Enter your name");
-  loadSubjects();
-  showPage("subject");
-};
+document.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById("startQuizBtn").onclick = startQuiz;
-document.getElementById("nextBtn").onclick = nextQuestion;
-document.getElementById("prevBtn").onclick = prevQuestion;
-document.getElementById("submitBtn").onclick = () => {
-  if (confirm("Are you sure you want to submit the quiz?")) {
-    submitQuiz();
+  document.getElementById("startBtn").onclick = () => showPage("name");
+
+  document.getElementById("continueBtn").onclick = () => {
+    studentName = document.getElementById("nameInput").value.trim();
+    if (!studentName) return alert("Enter your name");
+    loadSubjects();
+    showPage("subject");
+  };
+
+  document.getElementById("startQuizBtn").onclick = startQuiz;
+  document.getElementById("nextBtn").onclick = nextQuestion;
+  document.getElementById("prevBtn").onclick = prevQuestion;
+
+  document.getElementById("submitBtn").onclick = () => {
+    if (confirm("Are you sure you want to submit the quiz?")) {
+      submitQuiz();
+    }
+  };
+
+  document.getElementById("retakeBtn").onclick = retakeQuiz;
+  document.getElementById("goHomeBtn").onclick = goHome;
+  document.getElementById("reviewBtn").onclick = reviewAnswers;
+  document.getElementById("backResultBtn").onclick = () => showPage("result");
+
+  const backHomeBtn = document.getElementById("backHomeBtn");
+  if (backHomeBtn) {
+    backHomeBtn.onclick = () => {
+      if (confirm("Are you sure you want to quit the quiz and go back home? Your progress will be lost.")) {
+        goHome();
+      }
+    };
   }
-};
 
-document.getElementById("retakeBtn").onclick = retakeQuiz;
-document.getElementById("goHomeBtn").onclick = goHome;
-document.getElementById("reviewBtn").onclick = reviewAnswers;
-document.getElementById("backResultBtn").onclick = () => showPage("result");
-
-document.getElementById("backHomeBtn").onclick = () => {
-  if (confirm("Are you sure you want to quit the quiz and go back home? Your progress will be lost.")) {
-    goHome();  // Reuse your existing goHome() function to clear timer and localStorage, then show home page
-  }
-};
+});
 
 /* ===============================
    17. APP BOOTSTRAP
