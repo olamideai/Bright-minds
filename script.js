@@ -1270,6 +1270,12 @@ document.getElementById("goHomeBtn").onclick = goHome;
 document.getElementById("reviewBtn").onclick = reviewAnswers;
 document.getElementById("backResultBtn").onclick = () => showPage("result");
 
+document.getElementById("backHomeBtn").onclick = () => {
+  if (confirm("Are you sure you want to quit the quiz and go back home? Your progress will be lost.")) {
+    goHome();  // Reuse your existing goHome() function to clear timer and localStorage, then show home page
+  }
+};
+
 /* ===============================
    17. APP BOOTSTRAP
 ================================ */
