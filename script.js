@@ -22,7 +22,318 @@ let quizCompleted = false;
 const QUESTION_BANK = {
 
 
-
+"MTH 101 By Bro Waheed": [
+  {
+    "q": "Find α + β for 3x² - 2x + 9 = 0.",
+    "o": {
+      "A": "-2/3",
+      "B": "3/2",
+      "C": "2/3",
+      "D": "5"
+    },
+    "a": "C"
+  },
+  {
+    "q": "If a < 0, the parabola of the quadratic equation is:",
+    "o": {
+      "A": "Maximum",
+      "B": "Minimum",
+      "C": "None",
+      "D": "All of the above"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Find the quadratic equation which has roots 2 and -7.",
+    "o": {
+      "A": "x² - 5x + 14",
+      "B": "x² - 5x - 14",
+      "C": "x² + 5x - 14",
+      "D": "x + 5x² - 14"
+    },
+    "a": "C"
+  },
+  {
+    "q": "Solve the quadratic equation: x² + 5x - 6.",
+    "o": {
+      "A": "1, 6",
+      "B": "3, 2",
+      "C": "1, -6",
+      "D": "-1, -6"
+    },
+    "a": "C"
+  },
+  {
+    "q": "Quadratic equation is degree ___ of polynomial.",
+    "o": {
+      "A": "degree 5",
+      "B": "6",
+      "C": "3",
+      "D": "2"
+    },
+    "a": "D"
+  },
+  {
+    "q": "A ladder 6 m long leans against a wall making an angle of 65° with the horizontal. Calculate how far up the wall the ladder reaches (3 s.f.).",
+    "o": {
+      "A": "5.33 m",
+      "B": "4.83 m",
+      "C": "7 m",
+      "D": "5.44 m"
+    },
+    "a": "D"
+  },
+  {
+    "q": "The 12th term of an AP is -41. If the first term is 3, find the common difference.",
+    "o": {
+      "A": "4",
+      "B": "-5",
+      "C": "-4",
+      "D": "9"
+    },
+    "a": "C"
+  },
+  {
+    "q": "If S is directly proportional to T and T = 120 when S = 30, find T when S = 136.",
+    "o": {
+      "A": "544",
+      "B": "-544",
+      "C": "99",
+      "D": "208"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Simplify √80 + √20 - √45.",
+    "o": {
+      "A": "4√3",
+      "B": "6√4",
+      "C": "3√5",
+      "D": "5√3"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Find the conjugate of √3 + √2.",
+    "o": {
+      "A": "√3 - √7",
+      "B": "√4 + 3",
+      "C": "√3 + √2",
+      "D": "√3 - √2"
+    },
+    "a": "D"
+  },
+  {
+    "q": "Find the range: 20, 40, 3, 8, 9, 50.",
+    "o": {
+      "A": "27",
+      "B": "7",
+      "C": "47",
+      "D": "9"
+    },
+    "a": "C"
+  },
+  {
+    "q": "The set that has no element is called ___.",
+    "o": {
+      "A": "Empty set",
+      "B": "Universal set",
+      "C": "Singleton set",
+      "D": "None"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Given U = {x : 1 ≤ x ≤ 20}, A = {x : x is a prime number}, B = {even numbers}. Find A ∩ B.",
+    "o": {
+      "A": "{2}",
+      "B": "{}",
+      "C": "{2, 5, 10}",
+      "D": "{1, 2}"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Find the remainder when f(x) = 2x³ - 3x² + 4x - 1 is divided by x - 1.",
+    "o": {
+      "A": "1",
+      "B": "-2",
+      "C": "2",
+      "D": "-1"
+    },
+    "a": "D"
+  },
+  {
+    "q": "What is i⁵?",
+    "o": {
+      "A": "i",
+      "B": "√1",
+      "C": "-1",
+      "D": "1"
+    },
+    "a": "A"
+  },
+  {
+    "q": "A = [[1, 2], [3, 4]]. Find |A|.",
+    "o": {
+      "A": "2",
+      "B": "-2",
+      "C": "3",
+      "D": "1"
+    },
+    "a": "B"
+  },
+  {
+    "q": "The set of positive whole numbers is ___.",
+    "o": {
+      "A": "ℕ",
+      "B": "ℚ ∪ ℚᶜ",
+      "C": "ℂ",
+      "D": "ℤ"
+    },
+    "a": "A"
+  },
+  {
+    "q": "The set of rational and irrational numbers are ___.",
+    "o": {
+      "A": "ℚ ∪ ℚᶜ",
+      "B": "ℕ",
+      "C": "ℂ",
+      "D": "ℚ"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Simplify (75 a² b⁻²) / (5 a³ b⁻³).",
+    "o": {
+      "A": "15a/b",
+      "B": "-15b/a",
+      "C": "15b/a",
+      "D": "15ab"
+    },
+    "a": "C"
+  },
+  {
+    "q": "4ˣ = 0.5. Find x.",
+    "o": {
+      "A": "2",
+      "B": "-3/2",
+      "C": "1/2",
+      "D": "-1/2"
+    },
+    "a": "D"
+  },
+  {
+    "q": "Given log₁₀2 = 0.3010, log₁₀3 = 0.4771, log₁₀5 = 0.6990. Find log₁₀(1/2).",
+    "o": {
+      "A": "0.6990",
+      "B": "0.3010",
+      "C": "-0.3010",
+      "D": "0"
+    },
+    "a": "C"
+  },
+  {
+    "q": "log₂(x² - 2x + 5) = 2. Solve for x.",
+    "o": {
+      "A": "4, 5",
+      "B": "1 twice",
+      "C": "-1 twice",
+      "D": "2, -5"
+    },
+    "a": "C"
+  },
+  {
+    "q": "If tan x = 1, evaluate sin x + cos x.",
+    "o": {
+      "A": "√3/2",
+      "B": "√2/2",
+      "C": "√2",
+      "D": "1"
+    },
+    "a": "B"
+  },
+  {
+    "q": "sin²θ + cos²θ is ___.",
+    "o": {
+      "A": "5",
+      "B": "3",
+      "C": "1",
+      "D": "0"
+    },
+    "a": "C"
+  },
+  {
+    "q": "y = cos 3x, find dy/dx.",
+    "o": {
+      "A": "-sin 3x",
+      "B": "3 cos 3x",
+      "C": "-3 sin 3x",
+      "D": "0"
+    },
+    "a": "C"
+  },
+  {
+    "q": "y = sin x, find dy/dx.",
+    "o": {
+      "A": "-cos x",
+      "B": "cos x",
+      "C": "tan x",
+      "D": "sec x"
+    },
+    "a": "B"
+  },
+  {
+    "q": "y = 5x², find dy/dx.",
+    "o": {
+      "A": "4x",
+      "B": "10x²",
+      "C": "-5x",
+      "D": "10x"
+    },
+    "a": "D"
+  },
+  {
+    "q": "Evaluate sin 60° + cos 30°.",
+    "o": {
+      "A": "5√3",
+      "B": "2√3",
+      "C": "4√5",
+      "D": "√3"
+    },
+    "a": "B"
+  },
+  {
+    "q": "If Z₁ = 1 - 3i and Z₂ = -2 + 5i, find Z₁Z₂.",
+    "o": {
+      "A": "13 - 11i",
+      "B": "14 + 11i",
+      "C": "13 + 11i",
+      "D": "13"
+    },
+    "a": "A"
+  },
+  {
+    "q": "f(x) = 2x² + 5x³ - 9x - 18. Find f(2).",
+    "o": {
+      "A": "13",
+      "B": "-12",
+      "C": "9",
+      "D": "12"
+    },
+    "a": "B"
+  },
+  {
+    "q": "U = {x : -1 ≤ x ≤ 25}, A = {x : 2 ≤ x < 18}, B = {x : 7 < x ≤ 25}, C = {x : -1 ≤ x < 9}. Find A ∩ B ∪ C.",
+    "o": {
+      "A": "{x : 2 ≤ x ≤ 3}",
+      "B": "{x : -1 ≤ x < 18}",
+      "C": "{x : -1 ≤ x ≤ 18}",
+      "D": "{}"
+    },
+    "a": "B"
+  }
+],
    
   "GNS 113": [
     {
@@ -1756,7 +2067,7 @@ const QUESTION_BANK = {
 };
 
 const SUBJECT_TIME = {
-   
+  "MTH 101 By Bro Waheed": 60 * 15,
   "GNS 113": 60 * 15,
   "PHY 101": 60 * 15,
   "CHM 101": 60 * 15,
