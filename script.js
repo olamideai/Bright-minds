@@ -989,7 +989,164 @@ const QUESTION_BANK = {
       o: { A: "0", B: "1/2", C: "1", D: "√3" },
       a: "C"
     }
+  ],
+
+
+
+   
+  "PHY 101 (2)": [
+    {
+      q: "A car accelerates uniformly from rest to 20 m/s in 5 seconds. Calculate the acceleration.",
+      o: { A: "100 m/s²", B: "4 m/s²", C: "15 m/s²", D: "0.25 m/s²" },
+      a: "B"
+    },
+    {
+      q: "A projectile is launched at 30 m/s at an angle of 30° to the horizontal. Calculate its maximum height. (g = 10 m/s²)",
+      o: { A: "11.25 m", B: "45.0 m", C: "22.5 m", D: "15.0 m" },
+      a: "A"
+    },
+    {
+      q: "Two vectors of magnitudes 3 N and 4 N act at right angles. What is the magnitude of the resultant?",
+      o: { A: "7 N", B: "1 N", C: "5 N", D: "12 N" },
+      a: "C"
+    },
+    {
+      q: "A ball is dropped from a height of 80 m. How long does it take to reach the ground? (g = 10 m/s²)",
+      o: { A: "8 s", B: "4 s", C: "16 s", D: "2 s" },
+      a: "B"
+    },
+    {
+      q: "Calculate the displacement of an object that moves 6 m East and 8 m North.",
+      o: { A: "14 m", B: "2 m", C: "10 m", D: "48 m" },
+      a: "C"
+    },
+    {
+      q: "A man of mass 70 kg climbs a height of 10 m. Calculate the work done. (g = 10 m/s²)",
+      o: { A: "70 J", B: "700 J", C: "7,000 J", D: "70,000 J" },
+      a: "C"
+    },
+    {
+      q: "An object of mass 2 kg moves with a velocity of 5 m/s. Calculate its kinetic energy.",
+      o: { A: "10 J", B: "25 J", C: "50 J", D: "100 J" },
+      a: "C"
+    },
+    {
+      q: "A crane lifts a 500 kg load to a height of 20 m in 10 seconds. Calculate the power developed.",
+      o: { A: "1,000 W", B: "10,000 W", C: "5,000 W", D: "50,000 W" },
+      a: "B"
+    },
+    {
+      q: "A spring with force constant 200 N/m is compressed by 0.1 m. Calculate the elastic potential energy stored.",
+      o: { A: "1 J", B: "20 J", C: "2 J", D: "10 J" },
+      a: "C"
+    },
+    {
+      q: "Calculate the efficiency of a machine that requires 1000 J to perform 800 J of useful work.",
+      o: { A: "125%", B: "80%", C: "20%", D: "0.8%" },
+      a: "B"
+    },
+    {
+      q: "An object moves in a circle of radius 2 m with speed 4 m/s. Calculate the centripetal acceleration.",
+      o: { A: "2 m/s²", B: "16 m/s²", C: "8 m/s²", D: "4 m/s²" },
+      a: "C"
+    },
+    {
+      q: "Calculate the angular velocity of a wheel rotating at 120 rpm.",
+      o: { A: "2π rad/s", B: "4π rad/s", C: "120π rad/s", D: "60 rad/s" },
+      a: "B"
+    },
+    {
+      q: "A simple pendulum has a length of 0.9 m. Calculate its period. (g ≈ 10 m/s²)",
+      o: { A: "1.9 s", B: "3.0 s", C: "0.9 s", D: "6.0 s" },
+      a: "A"
+    },
+    {
+      q: "A particle in SHM has amplitude 0.5 m and frequency 2 Hz. Calculate its maximum velocity.",
+      o: { A: "π m/s", B: "2π m/s", C: "0.5π m/s", D: "4 m/s" },
+      a: "B"
+    },
+    {
+      q: "Calculate the tension in a string of length 1 m whirling a 0.5 kg mass at 2 m/s.",
+      o: { A: "1 N", B: "0.5 N", C: "2 N", D: "4 N" },
+      a: "C"
+    },
+    {
+      q: "A force of 10 N is applied at a distance of 0.25 m. Calculate the torque.",
+      o: { A: "40 Nm", B: "2.5 Nm", C: "10.25 Nm", D: "0.025 Nm" },
+      a: "B"
+    },
+    {
+      q: "Calculate the moment of inertia of a solid cylinder of mass 4 kg and radius 0.1 m.",
+      o: { A: "0.02 kg·m²", B: "0.04 kg·m²", C: "0.2 kg·m²", D: "0.4 kg·m²" },
+      a: "A"
+    },
+    {
+      q: "A wheel has angular acceleration of 2 rad/s². Starting from rest, find angular velocity after 5 s.",
+      o: { A: "2.5 rad/s", B: "7 rad/s", C: "10 rad/s", D: "20 rad/s" },
+      a: "C"
+    },
+    {
+      q: "Calculate the angular momentum of a disk with I = 5 kg·m² rotating at 10 rad/s.",
+      o: { A: "2 kg·m²/s", B: "50 kg·m²/s", C: "15 kg·m²/s", D: "0.5 kg·m²/s" },
+      a: "B"
+    },
+    {
+      q: "A beam is balanced at its center. A 20 N weight is 1 m from the pivot. What weight at 2 m balances it?",
+      o: { A: "40 N", B: "20 N", C: "10 N", D: "5 N" },
+      a: "C"
+    },
+    {
+      q: "A gas occupies 2 L at 1 atm. If volume is reduced to 0.5 L, find the new pressure.",
+      o: { A: "0.25 atm", B: "4 atm", C: "1 atm", D: "0.5 atm" },
+      a: "B"
+    },
+    {
+      q: "A gas at 27°C doubles its volume at constant pressure. Find the final temperature.",
+      o: { A: "54°C", B: "327°C", C: "600°C", D: "300°C" },
+      a: "D"
+    },
+    {
+      q: "Calculate the number of moles in 8 g of Oxygen gas.",
+      o: { A: "4 moles", B: "2 moles", C: "0.25 moles", D: "0.5 moles" },
+      a: "D"
+    },
+    {
+      q: "Calculate the pressure of 1 mole of gas in a 22.4 L container at 273 K.",
+      o: { A: "1 atm", B: "22.4 atm", C: "0.5 atm", D: "2 atm" },
+      a: "A"
+    },
+    {
+      q: "A balloon has a volume of 500 cm³ at 300 K. What is its volume at 600 K?",
+      o: { A: "250 cm³", B: "1000 cm³", C: "750 cm³", D: "1500 cm³" },
+      a: "B"
+    },
+    {
+      q: "Heat required to raise 2 kg of water from 20°C to 70°C. (c = 4200 J/kgK)",
+      o: { A: "420,000 J", B: "8,400 J", C: "210,000 J", D: "105,000 J" },
+      a: "C"
+    },
+    {
+      q: "Heat needed to melt 0.5 kg of ice at 0°C.",
+      o: { A: "1.67×10⁵ J", B: "6.68×10⁵ J", C: "3.34×10⁵ J", D: "1.5×10⁴ J" },
+      a: "A"
+    },
+    {
+      q: "A heat engine absorbs 5000 J and performs 1500 J of work. Calculate efficiency.",
+      o: { A: "15%", B: "30%", C: "33.3%", D: "70%" },
+      a: "C"
+    },
+    {
+      q: "Change in internal energy if system absorbs 200 J and does 50 J of work.",
+      o: { A: "250 J", B: "150 J", C: "-150 J", D: "4 J" },
+      a: "B"
+    },
+    {
+      q: "Convert 100°F to Celsius.",
+      o: { A: "37.8°C", B: "212°C", C: "55.5°C", D: "32°C" },
+      a: "A"
+    }
   ]
+
 
 
     
@@ -1000,7 +1157,8 @@ const SUBJECT_TIME = {
   "PHY 101": 60 * 15,
   "CHM 101": 60 * 15,
   "MTH 101": 60 * 20,
-  "EDU 101": 60 * 10
+  "EDU 101": 60 * 10,
+  "PHY 101 (2)": 60 * 15
 };
 
 /* ===============================
