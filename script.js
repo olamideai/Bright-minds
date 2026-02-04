@@ -35,7 +35,7 @@ const QUESTION_BANK = {
       },
       a: "A"
     },
-    {
+     {
       q: "The section, which is the image maker of the library is called………………",
       o: {
         A: "Cataloguing Section",
