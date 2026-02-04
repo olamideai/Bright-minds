@@ -1145,6 +1145,108 @@ const QUESTION_BANK = {
       o: { A: "37.8°C", B: "212°C", C: "55.5°C", D: "32°C" },
       a: "A"
     }
+
+    {
+      q: "A car moves with a constant velocity of 20 m/s. How far will it travel in 5 s?",
+      o: { A: "50 m", B: "80 m", C: "100 m", D: "120 m" },
+      a: "C"
+    },
+    {
+      q: "An object of mass 4 kg is accelerated at 3 m/s². Find the force applied.",
+      o: { A: "7 N", B: "12 N", C: "16 N", D: "24 N" },
+      a: "B"
+    },
+    {
+      q: "A body initially at rest accelerates uniformly at 2 m/s² for 10 s. Find the final velocity.",
+      o: { A: "10 m/s", B: "15 m/s", C: "20 m/s", D: "25 m/s" },
+      a: "C"
+    },
+    {
+      q: "Calculate the kinetic energy of a body of mass 5 kg moving at 4 m/s.",
+      o: { A: "20 J", B: "40 J", C: "60 J", D: "80 J" },
+      a: "B"
+    },
+    {
+      q: "A body of mass 2 kg is lifted to a height of 10 m. Take g = 10 m/s². Find its potential energy.",
+      o: { A: "100 J", B: "150 J", C: "200 J", D: "250 J" },
+      a: "C"
+    },
+    {
+      q: "A stone is thrown vertically upward with a velocity of 20 m/s. How long will it take to reach the highest point?",
+      o: { A: "1 s", B: "2 s", C: "3 s", D: "4 s" },
+      a: "B"
+    },
+    {
+      q: "An object moves in a circular path of radius 2 m with speed 4 m/s. Find the centripetal acceleration.",
+      o: { A: "4 m/s²", B: "6 m/s²", C: "8 m/s²", D: "16 m/s²" },
+      a: "C"
+    },
+    {
+      q: "The period of a simple pendulum is 2 s. Find its frequency.",
+      o: { A: "0.25 Hz", B: "0.5 Hz", C: "1 Hz", D: "2 Hz" },
+      a: "B"
+    },
+    {
+      q: "A force of 10 N acts on a body for 5 s. Find the impulse.",
+      o: { A: "2 Ns", B: "15 Ns", C: "50 Ns", D: "100 Ns" },
+      a: "C"
+    },
+    {
+      q: "A rigid body rotates with angular velocity 5 rad/s. Find the angular displacement in 4 s.",
+      o: { A: "5 rad", B: "10 rad", C: "15 rad", D: "20 rad" },
+      a: "D"
+    },
+    {
+      q: "A gas occupies 2 m³ at a pressure of 100 kPa. What will be the pressure if the volume is reduced to 1 m³?",
+      o: { A: "50 kPa", B: "100 kPa", C: "150 kPa", D: "200 kPa" },
+      a: "D"
+    },
+    {
+      q: "Calculate the density of a substance of mass 500 kg and volume 2 m³.",
+      o: { A: "100 kg/m³", B: "200 kg/m³", C: "250 kg/m³", D: "300 kg/m³" },
+      a: "C"
+    },
+    {
+      q: "The temperature of a gas is increased from 300 K to 600 K at constant volume. Find the ratio of final pressure to initial pressure.",
+      o: { A: "1 : 2", B: "2 : 1", C: "3 : 1", D: "4 : 1" },
+      a: "B"
+    },
+    {
+      q: "A metal rod expands by 2 mm when heated. If its original length is 1 m, find the strain.",
+      o: { A: "0.002", B: "0.02", C: "0.2", D: "2" },
+      a: "A"
+    },
+    {
+      q: "A gas does 500 J of work when it expands. Find the work done by the gas.",
+      o: { A: "0 J", B: "250 J", C: "500 J", D: "1000 J" },
+      a: "C"
+    },
+    {
+      q: "A body of mass 1 kg moves with velocity 10 m/s. Find its momentum.",
+      o: { A: "1 kgm/s", B: "5 kgm/s", C: "10 kgm/s", D: "20 kgm/s" },
+      a: "C"
+    },
+    {
+      q: "The heat required is given by Q = mcθ. If m = 2 kg, c = 420 J/kgK, θ = 5 K, find Q.",
+      o: { A: "2100 J", B: "3200 J", C: "4200 J", D: "8400 J" },
+      a: "D"
+    },
+    {
+      q: "An engine lifts a load of 200 N through a height of 5 m. Find the work done.",
+      o: { A: "200 J", B: "500 J", C: "1000 J", D: "1500 J" },
+      a: "C"
+    },
+    {
+      q: "If the angular speed of a rotating object is doubled, its centripetal force becomes",
+      o: { A: "doubled", B: "halved", C: "four times", D: "unchanged" },
+      a: "C"
+    },
+    {
+      q: "A gas at constant pressure has volume 2 m³ at 300 K. Find its volume at 600 K.",
+      o: { A: "2 m³", B: "3 m³", C: "4 m³", D: "6 m³" },
+      a: "C"
+    }
+       
   ]
 
 
