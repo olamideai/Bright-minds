@@ -867,7 +867,7 @@ const QUESTION_BANK = {
     {
       q: "If f(x) = x³ − 2x + 1, find the remainder when divided by (x − 1)",
       o: { A: "0", B: "−1", C: "1", D: "2" },
-      a: "C"
+      a: "A"
     },
     {
       q: "The discriminant of x² − 4x + 4 = 0 is",
