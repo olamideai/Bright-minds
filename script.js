@@ -1144,7 +1144,7 @@ const QUESTION_BANK = {
       q: "Convert 100°F to Celsius.",
       o: { A: "37.8°C", B: "212°C", C: "55.5°C", D: "32°C" },
       a: "A"
-    }
+    },
 
     {
       q: "A car moves with a constant velocity of 20 m/s. How far will it travel in 5 s?",
