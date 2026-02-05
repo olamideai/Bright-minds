@@ -2367,6 +2367,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+   document.getElementById("backNameBtn").onclick = () => {
+  showPage("name");
+};
+
+document.getElementById("backHomeBtn1").onclick = () => {
+  showPage("home");
+};
+
   document.getElementById("retakeBtn").onclick = retakeQuiz;
   document.getElementById("goHomeBtn").onclick = goHome;
   document.getElementById("reviewBtn").onclick = reviewAnswers;
