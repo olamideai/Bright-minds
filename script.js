@@ -22,6 +22,513 @@ let quizCompleted = false;
 const QUESTION_BANK = {
 
 
+
+  "PHY 101.pdf": [
+    {
+      "q": "The maximum range of a projectile occurs at an angle of...",
+      "o": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A car travelling with a uniform velocity of 30 m/s along a horizontal road overcomes a constant frictional force of 600 N. Calculate the power of the engine of the car.",
+      "o": {
+        "A": "20 W",
+        "B": "18,000 W",
+        "C": "630 W",
+        "D": "20,000 W"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Name the device that converts heat energy to electrical energy.",
+      "o": {
+        "A": "Electric motor",
+        "B": "Thermocouple",
+        "C": "Generator",
+        "D": "Solar cell"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The point where the line of best fit cuts the vertical axis is called...",
+      "o": {
+        "A": "Slope",
+        "B": "Gradient",
+        "C": "Intercept",
+        "D": "Origin"
+      },
+      "a": "C"
+    },
+    {
+      "q": "A body moving at a constant speed accelerates when it is in...",
+      "o": {
+        "A": "A straight line",
+        "B": "A vacuum",
+        "C": "Circular motion",
+        "D": "Equilibrium"
+      },
+      "a": "C"
+    },
+    {
+      "q": "A body accelerates uniformly from rest at 2 m/s². Calculate the magnitude of its velocity after travelling 4 m.",
+      "o": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "8 m/s",
+        "D": "16 m/s"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of the following is NOT a unit of energy?",
+      "o": {
+        "A": "Watt",
+        "B": "Kilowatt-hour",
+        "C": "Calorie",
+        "D": "Joule"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The unit cycle per second is also called...",
+      "o": {
+        "A": "Newton",
+        "B": "Hertz",
+        "C": "Pascal",
+        "D": "Joule"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The trajectory path of a projectile is...",
+      "o": {
+        "A": "A circle",
+        "B": "A straight line",
+        "C": "A parabola",
+        "D": "Hyperbolic"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which of the following is a fundamental unit?",
+      "o": {
+        "A": "m/s",
+        "B": "Candela",
+        "C": "Newton",
+        "D": "m/s²"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The slope of a straight line displacement-time graph represents...",
+      "o": {
+        "A": "Acceleration",
+        "B": "Velocity",
+        "C": "Force",
+        "D": "Distance"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of the following is NOT a derived unit?",
+      "o": {
+        "A": "Area",
+        "B": "Thrust",
+        "C": "Pressure",
+        "D": "Mass"
+      },
+      "a": "D"
+    },
+    {
+      "q": "Which of the following is incorrect?",
+      "o": {
+        "A": "Distance is a scalar",
+        "B": "Displacement is a vector",
+        "C": "Speed is a vector",
+        "D": "Velocity is a vector"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the engine power of a car with retarding force 500 N moving at constant speed 20 m/s?",
+      "o": {
+        "A": "10,000 W",
+        "B": "25 W",
+        "C": "2,500 W",
+        "D": "520 W"
+      },
+      "a": "A"
+    },
+    {
+      "q": "A ball of mass 0.5 kg moving at 10 m/s collides with another ball of equal mass at rest. If the two balls move together after impact, calculate their common velocity.",
+      "o": {
+        "A": "10 m/s",
+        "B": "5 m/s",
+        "C": "2.5 m/s",
+        "D": "0 m/s"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of the following correctly gives the relationship between linear speed (v) and angular speed (ω) of a body moving uniformly in a circle of radius r?",
+      "o": {
+        "A": "v = ω × r",
+        "B": "v = ω² × r",
+        "C": "v = ω × r²",
+        "D": "v = ω / r"
+      },
+      "a": "A"
+    },
+    {
+      "q": "If no net force acts on an object, the object maintains a state of rest or constant speed in a straight line. This is a statement of Newton's...",
+      "o": {
+        "A": "First Law",
+        "B": "Second Law",
+        "C": "Third Law",
+        "D": "Law of Universal Gravitation"
+      },
+      "a": "A"
+    },
+    {
+      "q": "A chemical balance is used for measuring...",
+      "o": {
+        "A": "Weight",
+        "B": "Mass",
+        "C": "Density",
+        "D": "Volume"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A body is projected with an initial velocity u at an angle θ to the horizontal. The time taken by it to reach its maximum height is given by:",
+      "o": {
+        "A": "u sin θ / g",
+        "B": "2 u sin θ / g",
+        "C": "u² sin θ / g",
+        "D": "u cos θ / g"
+      },
+      "a": "A"
+    },
+    {
+      "q": "A body of mass 1000 kg is released from a height of 10 m above the ground. Determine its kinetic energy just before it strikes the ground. (g = 10 m/s²)",
+      "o": {
+        "A": "10,000 J",
+        "B": "100,000 J",
+        "C": "1,000 J",
+        "D": "200,000 J"
+      },
+      "a": "B"
+    },
+    {
+      "q": "When a body is thrown vertically upwards, its velocity at the maximum height is...",
+      "o": {
+        "A": "Maximum",
+        "B": "10 m/s",
+        "C": "Zero",
+        "D": "Equal to its initial velocity"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which of the following sources of energy is renewable?",
+      "o": {
+        "A": "Petroleum",
+        "B": "Charcoal",
+        "C": "Hydro",
+        "D": "Nuclear"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The type of collision in which the two objects join together after an impact and move with the same velocity is termed:",
+      "o": {
+        "A": "Elastic collision",
+        "B": "Perfectly inelastic collision",
+        "C": "Partially elastic collision",
+        "D": "Explosive collision"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The potential energy in an elastic string of force constant k which has been extended by x metres is expressed as:",
+      "o": {
+        "A": "k x",
+        "B": "k x²",
+        "C": "½ k x²",
+        "D": "½ k² x"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The density of a block is 150 grams per cubic centimetre and has a mass of 80 grams. Calculate the volume of the block.",
+      "o": {
+        "A": "1.875 cm³",
+        "B": "0.533 cm³",
+        "C": "12,000 cm³",
+        "D": "1.50 cm³"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of the following is the unit of force?",
+      "o": {
+        "A": "Watt",
+        "B": "Joule",
+        "C": "Newton",
+        "D": "Newton-second"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What type of relationship exists between A and B if the increase in value A brings a decrease in the value of B?",
+      "o": {
+        "A": "Direct",
+        "B": "Inverse",
+        "C": "Quadratic",
+        "D": "Geometric"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The dependent variable in the equation F = ke is:",
+      "o": {
+        "A": "F",
+        "B": "k",
+        "C": "e",
+        "D": "None of the above"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The point where the line of best fit touches the vertical axis is called:",
+      "o": {
+        "A": "Slope",
+        "B": "Origin",
+        "C": "Intercept",
+        "D": "Gradient"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which of the following readings cannot be determined with a Micrometer screw gauge?",
+      "o": {
+        "A": "20.15 mm",
+        "B": "5.02 mm",
+        "C": "21.130 cm",
+        "D": "2.54 mm"
+      },
+      "a": "C"
+    },
+    {
+      "q": "A man of mass 50 kg ascends a flight of stairs 5 m high in 5 s. If acceleration due to gravity is 10 m/s², the power expended is...",
+      "o": {
+        "A": "50 W",
+        "B": "250 W",
+        "C": "500 W",
+        "D": "2500 W"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Under which of the following conditions is work done?",
+      "o": {
+        "A": "A man supports a heavy load above his head with his hands",
+        "B": "A boy climbs onto a table",
+        "C": "A woman holds a pot",
+        "D": "A bag of cocoa stands on a platform"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A loaded test-tube which floats upright in water is carefully and slightly depressed and then released. Which of the following best describes the subsequent motion?",
+      "o": {
+        "A": "Random",
+        "B": "Circular",
+        "C": "Linear",
+        "D": "Oscillatory"
+      },
+      "a": "D"
+    },
+    {
+      "q": "Which of the following is correct in Equations of Motion?",
+      "o": {
+        "A": "V = a / t",
+        "B": "v = u - at",
+        "C": "v = at - u",
+        "D": "v = u + at"
+      },
+      "a": "D"
+    },
+    {
+      "q": "A car travelling at a uniform speed of 120 km/h passes two stations in 4 minutes. Calculate the distance between the two stations.",
+      "o": {
+        "A": "8 km",
+        "B": "30 km",
+        "C": "480 km",
+        "D": "2 km"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Which of the following is not an essential component of a graph?",
+      "o": {
+        "A": "Title",
+        "B": "Coordinate axes",
+        "C": "Scales",
+        "D": "None of the above"
+      },
+      "a": "D"
+    },
+    {
+      "q": "The slope of the graph obtained in a simple pendulum experiment when a graph of l is plotted against T squared is 0.25 m/s². Determine the value of g.",
+      "o": {
+        "A": "2.50 m/s²",
+        "B": "4.00 m/s²",
+        "C": "9.87 m/s²",
+        "D": "39.48 m/s²"
+      },
+      "a": "C"
+    },
+    {
+      "q": "In a simple pendulum experiment, the value of T ________ as the value of l increases.",
+      "o": {
+        "A": "decreases",
+        "B": "increases",
+        "C": "remains constant",
+        "D": "increases and later decreases"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A simple pendulum makes 50 oscillations in one minute. Determine its period of oscillation.",
+      "o": {
+        "A": "0.83 s",
+        "B": "1.20 s",
+        "C": "50.0 s",
+        "D": "1.50 s"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The period of oscillation of a simple pendulum is 2 s when the length of the string is 64 cm. Calculate the period if the string's length is shortened to 49 cm.",
+      "o": {
+        "A": "1.50 s",
+        "B": "1.75 s",
+        "C": "1.85 s",
+        "D": "2.25 s"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A force of 10 N produced an extension of 2.50 cm. Determine the spring constant.",
+      "o": {
+        "A": "0.25 N/cm",
+        "B": "2.50 N/cm",
+        "C": "4.00 N/cm",
+        "D": "25.0 N/cm"
+      },
+      "a": "C"
+    },
+    {
+      "q": "In Hooke’s law experiment, a graph of the extension e was plotted against Force F. If the slope of the graph is 0.4 mN⁻¹, what is the value of k?",
+      "o": {
+        "A": "0.4 N/m",
+        "B": "2.5 N/m",
+        "C": "4.0 N/m",
+        "D": "1.4 N/m"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The energy stored in a spring of stiffness constant k = 2000 N/m when extended by 4 cm is:",
+      "o": {
+        "A": "1.6 J",
+        "B": "16.0 J",
+        "C": "80.0 J",
+        "D": "3.2 J"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Which of the following affect the period of a simple pendulum?",
+      "o": {
+        "A": "length of string",
+        "B": "mass of the bob",
+        "C": "acceleration due to gravity",
+        "D": "Both (A) and (C)"
+      },
+      "a": "D"
+    },
+    {
+      "q": "Which of the following represent the correct precision if the length of a piece of wire is measured with a metre rule?",
+      "o": {
+        "A": "35 mm",
+        "B": "35.0 mm",
+        "C": "35.00 mm",
+        "D": "35.01 mm"
+      },
+      "a": "B"
+    },
+      
+      
+  {
+    "q": "A car travelling at 30 m/s overcomes a frictional force of 100 N. The power developed by the engine is (1 hp = 0.75 kW).",
+    "o": {
+      "A": "3 kW",
+      "B": "4 kW",
+      "C": "5 kW",
+      "D": "6 kW"
+    },
+    "a": "C"
+  },
+  {
+    "q": "Which of the following is the unit of moment of inertia?",
+    "o": {
+      "A": "kg·m²",
+      "B": "kg/m",
+      "C": "kg·m",
+      "D": "kg·cm⁻²"
+    },
+    "a": "A"
+  },
+  {
+    "q": "When an elastic material is stretched by a force, the energy stored in it is:",
+    "o": {
+      "A": "Kinetic energy",
+      "B": "Heat energy",
+      "C": "Strain energy",
+      "D": "Electrical energy"
+    },
+    "a": "C"
+  },
+  {
+    "q": "A body of mass 1000 kg is released from a height of 10 m. Its kinetic energy just before hitting the ground is (g = 10 m/s²).",
+    "o": {
+      "A": "1,000 J",
+      "B": "5,000 J",
+      "C": "10,000 J",
+      "D": "100,000 J"
+    },
+    "a": "D"
+  },
+  {
+    "q": "The product of pressure and volume has the same dimension as:",
+    "o": {
+      "A": "Force",
+      "B": "Energy",
+      "C": "Power",
+      "D": "Momentum"
+    },
+    "a": "B"
+  }
+],
+
+   
 "MTH 101 By Bro Waheed": [
   {
     "q": "Find α + β for 3x² - 2x + 9 = 0.",
@@ -46,7 +553,7 @@ const QUESTION_BANK = {
   {
     "q": "Find the quadratic equation which has roots 2 and -7.",
     "o": {
-      "A": "x² - 5x + 14",
+     "A": "x² - 5x + 14",
       "B": "x² - 5x - 14",
       "C": "x² + 5x - 14",
       "D": "x + 5x² - 14"
@@ -2067,6 +2574,7 @@ const QUESTION_BANK = {
 };
 
 const SUBJECT_TIME = {
+  "PHY 101.pdf": 60 * 15,
   "MTH 101 By Bro Waheed": 60 * 15,
   "GNS 113": 60 * 15,
   "PHY 101": 60 * 15,
