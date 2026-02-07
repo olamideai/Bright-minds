@@ -413,7 +413,7 @@ const QUESTION_BANK = {
         "C": "17",
         "D": "-13"
       },
-      "a": "A"
+      "a": "B"
     },
     {
       "q": "An object of mass 50 Kg is projected with a velocity of 20 ms-1 at an angle of 60 degrees to the horizontal. Calculate the time of flight.",
