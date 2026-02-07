@@ -4146,7 +4146,7 @@ function startTimer() {
       clearInterval(timer);
       submitQuiz();
     }
-  }, 1000);
+  }, 500);
 }
 
 function formatTime(sec) {
