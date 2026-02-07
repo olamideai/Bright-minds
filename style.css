@@ -372,7 +372,7 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   color: var(--neon);
-  animation: neonGlow 25s ease-in-out infinite;
+  animation: neonGlow 30s ease-in-out infinite;
   text-align: center;
   user-select: none;
 }
