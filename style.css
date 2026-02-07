@@ -325,3 +325,32 @@ body {
   margin-bottom: 20px;
   user-select: none;
 }
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #00e5ff,
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 40px #1a73e8,
+      0 0 80px #1a73e8;
+    color: #00e5ff;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #ff00ff,
+      0 0 20px #ff00ff,
+      0 0 30px #ff00ff,
+      0 0 50px #e91e63,
+      0 0 100px #e91e63;
+    color: #ff00ff;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--neon);
+  animation: neonGlow 4s ease-in-out infinite;
+  text-align: center;
+  user-select: none;
+  }
