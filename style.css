@@ -379,12 +379,13 @@ h1 {
 #resultName,
 #resultSubject {
   font-size: 18px;
-  font-weight: bold;
-  color: black;
+  font-weight: 600;
+  color: #e6edf3;   /* Soft premium white */
+  letter-spacing: 0.3px;
 }
 
 .label {
-  font-weight: normal;
-  color: gray;
-  margin-left: 5px;
+  font-weight: 500;
+  color: #00d4ff;   /* Professional cyan accent */
+  margin-right: 6px;
 }
