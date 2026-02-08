@@ -376,3 +376,15 @@ h1 {
   text-align: center;
   user-select: none;
 }
+#resultName,
+#resultSubject {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.label {
+  font-weight: normal;
+  color: gray;
+  margin-left: 5px;
+}
