@@ -4168,8 +4168,8 @@ function submitQuiz() {
     if (answers[i] === q.a) score++;
   });
 
-  document.getElementById("resultName").textContent = `Name: ${studentName}`;
-  document.getElementById("resultSubject").textContent = `Subject: ${currentSubject}`;
+  document.getElementById("resultName").innerHTML = `Name: <span class="label"> ${studentName}</span>`;
+document.getElementById("resultSubject").innerHTML = `Subject: <span class="label"> ${currentSubject}</span>`;
   document.getElementById("scoreCircle").textContent = `${score} / ${questions.length}`;
   document.getElementById("percentCircle").textContent =
     Math.round((score / questions.length) * 100) + "%";
