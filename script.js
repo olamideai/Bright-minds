@@ -2016,7 +2016,7 @@ const QUESTION_BANK = {
       "C": "3√5",
       "D": "5√3"
     },
-    "a": "A"
+    "a": "C"
   },
   {
     "q": "Find the conjugate of √3 + √2.",
@@ -2066,7 +2066,7 @@ const QUESTION_BANK = {
       "C": "2",
       "D": "-1"
     },
-    "a": "D"
+    "a": "C"
   },
   {
     "q": "What is i⁵?",
@@ -2146,7 +2146,7 @@ const QUESTION_BANK = {
       "C": "-1 twice",
       "D": "2, -5"
     },
-    "a": "C"
+    "a": "B"
   },
   {
     "q": "If tan x = 1, evaluate sin x + cos x.",
