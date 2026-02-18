@@ -2569,6 +2569,7 @@ function renderQuestion() {
     div.onclick = () => selectOption(key);
     optionsBox.appendChild(div);
   }
+   updateProgressBar();
 }
 
 /* ===============================
@@ -2809,4 +2810,11 @@ function bootstrap() {
 }
 
 bootstrap();
-   
+/* ==================================
+   18. PROGRESS BAR
+   ================================ */
+
+   function updateProgressBar() {
+  const progress = ((currentIndex + 1) / questions.length) * 100;
+  document.getElementById("progressBar").style.width = progress + "%";
+   }
