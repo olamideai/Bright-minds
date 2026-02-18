@@ -2588,7 +2588,7 @@ function selectOption(key) {
       renderQuestion();
     }
     // If it's the last question → do nothing
-  }, 300);
+  }, 150);
 }
 /* ===============================
    10. NEXT & PREVIOUS
