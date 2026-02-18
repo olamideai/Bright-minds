@@ -47,39 +47,44 @@ body {
   text-align: center;
 }
 
+
+.btn-group {
+  display: flex;
+  justify-content: space-between; /* spread buttons evenly */
+  gap: 12px;                       /* spacing between buttons */
+  margin-top: 25px;                /* space above the buttons */
+  flex-wrap: wrap;                  /* responsive wrap */
+}
+
 .btn {
-  background: transparent;
-  color: var(--text);
-  border: 2px solid var(--neon);
-  padding: 12px 18px;
-  border-radius: 12px;
+  flex: 1;                          /* make all buttons same width */
+  padding: 12px 0;                  /* taller buttons for better click area */
+  border-radius: 12px;              /* match theme */
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background: rgba(0,229,255,.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 229, 255, 0.3);
 }
 
 .btn.danger {
-  background-color: #e74c3c; /* professional red */
+  flex: 1.2;                        /* slightly wider for emphasis */
+  background-color: #e74c3c;
   border-color: #e74c3c;
   color: #fff;
 }
 
 .btn.danger:hover {
-  background-color: #c0392b; /* darker red on hover */
+  background-color: #c0392b;
   border-color: #c0392b;
   color: #fff;
 }
 
-.btn-group {
-  display:flex;
-  gap:12px;
-  margin-top:20px;
-  flex-wrap: wrap;
-}
 
 .input {
   width:100%;
