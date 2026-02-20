@@ -322,7 +322,258 @@ const QUESTION_BANK = {
    }
     
 ],
-"PHY 101/107 (2)": [],
+"PHY 101/107 (2)": [
+   {
+      q: "Device used to determine relative density of acid",
+      o: { A: "Manometer", B: "Hydrometer", C: "Hygrometer", D: "Hypsometer" },
+      a: "B"
+    },
+    {
+      q: "Electricity meters measure energy in",
+      o: { A: "Joules", B: "Watts", C: "Kilowatt-hour (kWh)", D: "Volt" },
+      a: "C"
+    },
+    {
+      q: "Tendency of a body to remain at rest is",
+      o: { A: "Momentum", B: "Inertia", C: "Force", D: "Pressure" },
+      a: "B"
+    },
+    {
+      q: "Area under a force–velocity graph represents",
+      o: { A: "Power", B: "Work", C: "Energy", D: "Impulse" },
+      a: "A"
+    },
+    {
+      q: "Reflected sound heard after making a sound is",
+      o: { A: "Echo", B: "Refraction", C: "Resonance", D: "Pitch" },
+      a: "A"
+    },
+    {
+      q: "Dimension of impulse is",
+      o: { A: "MLT⁻²", B: "MLT⁻¹", C: "ML⁻¹T", D: "ML²T" },
+      a: "B"
+    },
+    {
+      q: "Which is NOT an example of kinetic energy?",
+      o: { A: "Student running", B: "Electrical charges in motion", C: "Wind in motion", D: "None of the above" },
+      a: "D"
+    },
+    {
+      q: "Correct dimensions of density and pressure",
+      o: { A: "ML⁻³ and ML⁻¹T⁻²", B: "ML⁻¹T", C: "ML² and ML⁻²", D: "ML³ and ML⁻²" },
+      a: "A"
+    },
+    {
+      q: "Energy stored in spring (k = 2000 N/m, extension = 4 cm)",
+      o: { A: "1.6 J", B: "16 J", C: "0.16 J", D: "8 J" },
+      a: "A"
+    },
+    {
+      q: "Bullet (0.2 kg, 800 m/s) hits 2 kg wood (inelastic). Final velocity is",
+      o: { A: "72.7 m/s", B: "80 m/s", C: "100 m/s", D: "50 m/s" },
+      a: "A"
+    },
+    {
+      q: "Range of projected particle is",
+      o: { A: "u sinθ.H", B: "u cosθ.T", C: "u tanθ.T", D: "u sinθ.T" },
+      a: "D"
+    },
+    {
+      q: "A 60 kg boy runs up 3 m height (g=10). Work done is",
+      o: { A: "600 J", B: "1800 J", C: "300 J", D: "200 J" },
+      a: "B"
+    },
+    {
+      q: "Maximum force before motion starts is",
+      o: { A: "Friction", B: "Static friction", C: "Kinetic friction", D: "Tension" },
+      a: "B"
+    },
+    {
+      q: "Density =150 g/cm³, Mass=80 g. Volume is",
+      o: { A: "0.53 cm³", B: "53 cm³", C: "12 cm³", D: "5.3 cm³" },
+      a: "A"
+    },
+    {
+      q: "Reading that cannot be measured by micrometer screw gauge",
+      o: { A: "20.15", B: "5.02", C: "21.130 cm", D: "2.54 cm" },
+      a: "D"
+    },
+    {
+      q: "A man of mass 50 kg ascends a flight of stairs 5 m high in 5 seconds. If acceleration due to gravity is 10 ms⁻², the power expended is",
+      o: { A: "50 W", B: "500 W", C: "250 W", D: "2500 W" },
+      a: "B"
+    },
+    {
+      q: "Under which of the following conditions is work done?",
+      o: { A: "A man supports a heavy load above his head with his hands", B: "A boy climbs onto a table", C: "A woman holds a pot", D: "A bag of cocoa stands on a platform" },
+      a: "B"
+    },
+    {
+      q: "A loaded test-tube which floats upright in water is carefully and slightly depressed and then released. Which of the following best describes the subsequent motion of the test tube?",
+      o: { A: "Random", B: "Circular", C: "Linear", D: "Oscillatory" },
+      a: "D"
+    },
+    {
+      q: "Which of the following is correct?",
+      o: { A: "V = a/t", B: "v = u - at", C: "v = at - u", D: "v = u + at" },
+      a: "D"
+    },
+    {
+      q: "Time is a measure of",
+      o: { A: "different physical events", B: "variation between physical events", C: "rate of change of physical events", D: "interval between physical events" },
+      a: "D"
+    },
+    {
+      q: "Physics is a pure science that deals with",
+      o: { A: "matter", B: "energy", C: "relationship between different forms of energy", D: "relationship between matter and energy" },
+      a: "D"
+    },
+    {
+      q: "A car travelling at a uniform speed of 120 kmh⁻¹ passes two stations in 4 minutes. Calculate the distance between the two stations.",
+      o: { A: "8 km", B: "30 km", C: "480 km", D: "0.5 km" },
+      a: "A"
+    },
+    {
+      q: "The branch of physics that deals with sound and waves is",
+      o: { A: "acoustics", B: "geophysics", C: "biophysics", D: "mechanics" },
+      a: "A"
+    },
+    {
+      q: "Which of the units of the following physical quantities is not a derived unit?",
+      o: { A: "Area", B: "Thrust", C: "Pressure", D: "Mass" },
+      a: "D"
+    },
+    {
+      q: "Which of the following is incorrect?",
+      o: { A: "Distance is a scalar", B: "Displacement is a vector", C: "Speed is a vector", D: "Velocity is a vector" },
+      a: "C"
+    },
+    {
+      q: "Which of these motions could be uniform?",
+      o: { A: "Molecular motion", B: "Circular motion", C: "Vibrating pendulum", D: "Vibrational motion" },
+      a: "D"
+    },
+    {
+      q: "What is the engine power of a car with retarding force 500 N moving at constant speed 20 ms⁻¹?",
+      o: { A: "25 W", B: "10,000 W", C: "520 W", D: "480 W" },
+      a: "B"
+    },
+    {
+      q: "The speed of a bullet of mass 20 g is 216 kmh⁻¹. What is its K.E in joules?",
+      o: { A: "36 J", B: "466.56 J", C: "0.036 J", D: "36,000 J" },
+      a: "A"
+    },
+    {
+      q: "The main cause of motion is",
+      o: { A: "Speed", B: "Acceleration", C: "Force", D: "Velocity" },
+      a: "C"
+    },
+    {
+      q: "A car travelling at a uniform speed of 120 kmh⁻¹ passes two stations in 4 minutes. Calculate the distance between the two stations.",
+      o: { A: "8 km", B: "30 km", C: "480 km", D: "0.5 km" },
+      a: "A"
+    },
+    {
+      q: "A ball of mass 0.5 kg moving at 10 ms⁻¹ collides with another ball of equal mass at rest. If the two balls move together after impact, calculate their common velocity.",
+      o: { A: "20 ms⁻¹", B: "10 ms⁻¹", C: "5 ms⁻¹", D: "2.5 ms⁻¹" },
+      a: "C"
+    },
+    {
+      q: "Which of the following correctly gives the relationship between linear speed, v and angular speed, ω of a body moving uniformly in a circle of radius, r?",
+      o: { A: "v = ω r", B: "v = ω² r", C: "v = ω r²", D: "v = ω / r" },
+      a: "A"
+    },
+    {
+      q: "The motion of a body is simple harmonic if the",
+      o: { A: "acceleration is always directed towards a fixed point", B: "path of motion is a straight line", C: "acceleration is directed towards a fixed point and proportional to its distance from the point", D: "acceleration is constant and directed towards a fixed point" },
+      a: "C"
+    },
+    {
+      q: "What is the angular speed of a body vibrating at 50 cycles per second?",
+      o: { A: "50π rad/s", B: "100π rad/s", C: "25π rad/s", D: "10π rad/s" },
+      a: "B"
+    },
+    {
+      q: "When a mass attached to a spiral spring is set into vertical oscillations, its acceleration will have a",
+      o: { A: "varying magnitude but a constant direction", B: "constant magnitude and a constant direction", C: "constant magnitude but a varying direction", D: "varying magnitude and a varying direction" },
+      a: "D"
+    },
+    {
+      q: "For a simple pendulum of length, l, the period is given by",
+      o: { A: "2π√(l/g)", B: "2π√(g/l)", C: "2π√(g/π)", D: "2g√(l/2π)" },
+      a: "A"
+    },
+    {
+      q: "Which is the incorrect formula for a body accelerating uniformly?",
+      o: { A: "a = (v² - u²)/2s", B: "v² = u² + 2as", C: "s = 1/2 ut + at²", D: "v = u + at" },
+      a: "C"
+    },
+    {
+      q: "A catapult is used to project a stone. Which of the following energy conversions takes place as the stone is released?",
+      o: { A: "The kinetic energy of the stone is converted into gravitational potential energy of the catapult", B: "The gravitational potential energy is converted into the kinetic energy of the stone", C: "The elastic potential energy of catapult is converted into the kinetic energy of the stone", D: "The gravitational potential energy is converted into elastic potential energy" },
+      a: "C"
+    },
+    {
+      q: "For a freely falling body",
+      o: { A: "the ratio of kinetic energy to potential energy is constant", B: "the sum of kinetic and potential energies is constant", C: "the total energy is entirely kinetic", D: "the total energy is entirely potential" },
+      a: "B"
+    },
+    {
+      q: "A stationary ball is hit by an average force 50 N for a time of 0.03 s. What is the impulse experienced by the body in newton-second?",
+      o: { A: "1.5 Ns", B: "1500 Ns", C: "150 Ns", D: "15 Ns" },
+      a: "A"
+    },
+    {
+      q: "Which of the following is not an example of force?",
+      o: { A: "Tension", B: "Weight", C: "Mass", D: "Friction" },
+      a: "C"
+    },
+    {
+      q: "Which of the following is not a conductor of electricity?",
+      o: { A: "Human body", B: "Silver", C: "Glass", D: "Copper" },
+      a: "C"
+    },
+    {
+      q: "Power is defined as the",
+      o: { A: "rate of doing work", B: "capacity to do work", C: "product of force and time", D: "ability to move" },
+      a: "A"
+    },
+    {
+      q: "Which of the following types of motion does a body undergo when moving in a haphazard manner?",
+      o: { A: "Random motion", B: "Translational motion", C: "Vibrational motion", D: "Circular motion" },
+      a: "A"
+    },
+    {
+      q: "Which of the following quantities has the same unit as energy?",
+      o: { A: "Power", B: "Work", C: "Force", D: "Impulse" },
+      a: "B"
+    },
+    {
+      q: "Which of the following is a scalar quantity?",
+      o: { A: "Tension", B: "Impulse", C: "Distance", D: "Force" },
+      a: "C"
+    },
+    {
+      q: "Two bodies each carrying a charge of 2.00 × 10⁻¹⁰ C are 5 cm apart. Calculate the magnitude of the force on the charges. (1/4πε₀ = 9 × 10⁹ Nm²C⁻²)",
+      o: { A: "1.44 × 10⁻⁷ N", B: "7.2 × 10⁻⁸ N", C: "7.20 × 10⁻¹¹ N", D: "1.44 × 10⁻¹¹ N" },
+      a: "A"
+    },
+    {
+      q: "Which of the following sources of energy is renewable?",
+      o: { A: "Petroleum", B: "Charcoal", C: "Hydro", D: "Nuclear" },
+      a: "C"
+    },
+    {
+      q: "If an object of mass 50 kg moves at 5 ms⁻¹ round a circular path of radius 10 m, calculate the centripetal force needed to keep it in its orbit",
+      o: { A: "125 N", B: "25 N", C: "12.5 N", D: "250 N" },
+      a: "A"
+    },
+    {
+      q: "A boy of mass 20 kg moves at 5 ms⁻¹ round a circular path of radius 10 m, calculate the centripetal acceleration",
+      o: { A: "2.5 ms⁻²", B: "50 ms⁻²", C: "0.5 ms⁻²", D: "25 ms⁻²" },
+      a: "A"
+       }
+],
 "PHY 101/107 (3)": []
 
         
