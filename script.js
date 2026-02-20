@@ -574,7 +574,257 @@ const QUESTION_BANK = {
       a: "A"
        }
 ],
-"PHY 101/107 (3)": []
+"PHY 101/107 (3)": [{
+      q: "The type of collision in which the two objects join together after an impact and move with the same velocity is termed...",
+      o: { A: "Elastic", B: "Inelastic", C: "Perfectly Inelastic", D: "Explosion" },
+      a: "C"
+    },
+    {
+      q: "Given T² = 4π² * (L / g). Which of the following is the correct equation for the value of g if a graph of T² is plotted against L?",
+      o: { A: "4π² / L", B: "S / 4π²", C: "4π² S", D: "4π² / S (where S is the slope of the graph)" },
+      a: "D"
+    },
+    {
+      q: "The potential energy in an elastic string of force constant K which has been extended by x metres is expressed as...",
+      o: { A: "Kx", B: "Kx²", C: "1/2 Kx²", D: "1/2 Kx" },
+      a: "C"
+    },
+    {
+      q: "The period of oscillation of a simple pendulum is related to its length L and acceleration g by T = k L^x g^y. Determine the value of x and y where k is a constant.",
+      o: { A: "1/2, -1/2", B: "-1/2, 1/2", C: "0, 1/2", D: "1/2, 0" },
+      a: "A"
+    },
+    {
+      q: "Given that the period of oscillation of a pendulum is given by T = k m^x L^y g^z where k is a constant. Find the value of x, y and z.",
+      o: { A: "1, 0, 1", B: "0, 1/2, -1/2", C: "0, 1/2, 1/2", D: "0, 1, 1/2" },
+      a: "B"
+    },
+    {
+      q: "A chemical balance is used for measuring...",
+      o: { A: "Weight", B: "Mass", C: "Density", D: "Volume" },
+      a: "B"
+    },
+    {
+      q: "When an elastic material is stretched by a force, the energy stored in it is...",
+      o: { A: "Kinetic energy", B: "Elastic potential energy", C: "Chemical energy", D: "Thermal energy" },
+      a: "B"
+    },
+    {
+      q: "Material that can be stretched and still return to the original forms when the stresses are removed are said to be...",
+      o: { A: "Plastic", B: "Elastic", C: "Rigid", D: "Brittle" },
+      a: "B"
+    },
+    {
+      q: "A simple pendulum makes X oscillations in one minute. Determine X if its period of oscillation is 1.20 s.",
+      o: { A: "50", B: "60", C: "72", D: "100" },
+      a: "A"
+    },
+    {
+      q: "The density of a block is 150 gcm⁻³ and has a mass of 80 g. Calculate the volume of the block.",
+      o: { A: "12,000 cm³", B: "1.875 cm³", C: "0.533 cm³", D: "18.75 cm³" },
+      a: "C"
+    },
+    {
+      q: "Which of the following is the unit of force?",
+      o: { A: "W", B: "J", C: "N", D: "Ns" },
+      a: "C"
+    },
+    {
+      q: "The graph showing the variation in the angle of deviation of light through prism with the angle of incidence is...",
+      o: { A: "a straight line", B: "a curve", C: "a parabola", D: "a hyperbola" },
+      a: "B"
+    },
+    {
+      q: "Which of the following graph will give us more information?",
+      o: { A: "Linear graph", B: "Non-linear graph", C: "Assotopic graph", D: "Quadratic graph" },
+      a: "A"
+    },
+    {
+      q: "What type of relationship exists between A and B if the increase in the value A brings a decrease in the value of B?",
+      o: { A: "direct", B: "inverse", C: "quadratic", D: "geometric" },
+      a: "B"
+    },
+    {
+      q: "The dependent variable in the equation F = ke is...",
+      o: { A: "F", B: "k", C: "e", D: "None of the above" },
+      a: "A"
+    },
+    {
+      q: "The point where the line of best fit touches the vertical axis is called...",
+      o: { A: "Slope", B: "Origin", C: "Intercept", D: "Gradient" },
+      a: "C"
+    },
+    {
+      q: "Which of the following is not an essential component of a graph?",
+      o: { A: "Title", B: "Coordinate axes", C: "Scales", D: "None of the above" },
+      a: "D"
+    },
+    {
+      q: "The slope of the graph obtained in a simple pendulum experiment when a graph of l is plotted against T² is 0.25 ms⁻². Determine the value of g.",
+      o: { A: "9.87 ms⁻² (Using g = 4π² * slope)", B: "10 ms⁻²", C: "1.0 ms⁻²", D: "0.25 ms⁻²" },
+      a: "A"
+    },
+    {
+      q: "In a simple pendulum experiment, the value of T ______ as the value of l increases.",
+      o: { A: "decreases", B: "increases", C: "remains constant", D: "increases and later decreases" },
+      a: "B"
+    },
+    {
+      q: "A simple pendulum makes 50 oscillations in one minute. Determine its period of oscillation.",
+      o: { A: "1.2 s", B: "0.83 s", C: "50 s", D: "60 s" },
+      a: "A"
+    },
+    {
+      q: "The period of oscillation of a simple pendulum is 2 s when the length of the string is 64 cm. Calculate the period if the string's length is shortened to 49 cm.",
+      o: { A: "1.75 s", B: "1.53 s", C: "2.61 s", D: "1.43 s" },
+      a: "A"
+    },
+    {
+      q: "A force of 10 N produced an extension of 2.50 cm. Determine the spring constant.",
+      o: { A: "4 Nm⁻¹", B: "400 Nm⁻¹", C: "0.25 Nm⁻¹", D: "25 Nm⁻¹" },
+      a: "B"
+    },
+    {
+      q: "In Hooke's law experiment, a graph of the extension e was plotted against Force F. If the slope of the graph is 0.4 mN⁻¹. What is the value of k?",
+      o: { A: "2.5 Nm⁻¹", B: "0.4 Nm⁻¹", C: "4.0 Nm⁻¹", D: "25 Nm⁻¹" },
+      a: "A"
+    },
+    {
+      q: "The energy stored in a spring of stiffness constant k = 2000 Nm⁻¹ when extended by 4 cm is...",
+      o: { A: "1.6 J", B: "1600 J", C: "4 J", D: "80 J" },
+      a: "A"
+    },
+    {
+      q: "Which of the following affect the period of a simple pendulum?",
+      o: { A: "length of string", B: "mass of the bob", C: "acceleration due to gravity", D: "None of the above" },
+      a: "A"
+    },
+    {
+      q: "The frequency of a certain pendulum A is 10 cycles per second, and the frequency of another pendulum B is 5 cycles per second. Which pendulum is longer in length?",
+      o: { A: "A", B: "B", C: "both are equal in length", D: "A is slightly longer than B" },
+      a: "B"
+    },
+    {
+      q: "The period of oscillation can be defined as...",
+      o: { A: "time taken for one complete cycle", B: "number of cycles per second", C: "maximum displacement from equilibrium", D: "distance between two crests" },
+      a: "A"
+    },
+    {
+      q: "The main reading of a Vernier calliper is 6.2 cm. If the main scale and the vernier scale coincides at the 7th position. What is the total reading of the instrument?",
+      o: { A: "6.27 cm", B: "6.9 cm", C: "0.627 cm", D: "62.7 cm" },
+      a: "A"
+    },
+    {
+      q: "The diameter of a piece of wire can be most accurate when measured with a...",
+      o: { A: "Metre rule", B: "Vernier calliper", C: "Micrometer screw gauge", D: "Tape measure" },
+      a: "C"
+    },
+    {
+      q: "Which of the following represent the correct precision if the length of a piece of wire is measured with a metre rule?",
+      o: { A: "35 mm", B: "35.0 mm", C: "35.00 mm", D: "35.01 mm" },
+      a: "B"
+    },
+    {
+      q: "The smallest scale division of a Vernier caliper is...",
+      o: { A: "0.1 cm", B: "0.01 cm", C: "0.001 cm", D: "1.0 cm" },
+      a: "B"
+    },
+    {
+      q: "Which of the following is not a part of the micrometer screw gauge?",
+      o: { A: "Anvil", B: "Spindle", C: "None", D: "Thimble" },
+      a: "C"
+    },
+    {
+      q: "The clenched jaws of the anvil and the spindle are brought into contact through...",
+      o: { A: "sleeve", B: "ratchet", C: "anvil", D: "spindle" },
+      a: "B"
+    },
+    {
+      q: "A simple pendulum 0.64 m long has a period of 1.2 s, calculate the period of a similar pendulum 0.36 m long in the same location.",
+      o: { A: "0.9 s", B: "1.0 s", C: "0.6 s", D: "0.8 s" },
+      a: "A"
+    },
+    {
+      q: "An error due to inherent defects in the method or apparatus used is called...",
+      o: { A: "Random error", B: "Systematic error", C: "Personal error", D: "Parallax error" },
+      a: "B"
+    },
+    {
+      q: "Errors due to personal peculiarities of an observer where human reaction to an event or estimation affects the results are called...",
+      o: { A: "Systematic errors", B: "Random errors", C: "Personal errors", D: "Instrumental errors" },
+      a: "C"
+    },
+    {
+      q: "The only way to eliminate systematic errors is to...",
+      o: { A: "take many readings", B: "use a different instrument/method", C: "be more careful", D: "calculate the mean" },
+      a: "B"
+    },
+    {
+      q: "The only remedy to random errors is to...",
+      o: { A: "check the zero point", B: "take the average of several readings", C: "use a more expensive tool", D: "ignore them" },
+      a: "B"
+    },
+    {
+      q: "The errors due to the accuracy of the division of graduated scales on the instrument is called...",
+      o: { A: "Scale error", B: "Personal error", C: "Random error", D: "Parallax error" },
+      a: "A"
+    },
+    {
+      q: "Errors due to unknown causes or chance are known as...",
+      o: { A: "Systematic errors", B: "Random errors", C: "Personal errors", D: "Instrumental errors" },
+      a: "B"
+    },
+    {
+      q: "Experimental errors are usually divided into two main types which are...",
+      o: { A: "Personal and Random", B: "Systematic and Random", C: "Scale and Instrumental", D: "Small and Large" },
+      a: "B"
+    },
+    {
+      q: "At a glance, _____ gives a comprehensive picture of the experiment than the data themselves.",
+      o: { A: "a device", B: "a curve", C: "a line", D: "a graph" },
+      a: "D"
+    },
+    {
+      q: "The general form of the equation which yields a straight line is...",
+      o: { A: "y = mx² + c", B: "xy = mc", C: "y = mx + c", D: "xy = m² + c" },
+      a: "C"
+    },
+    {
+      q: "The S.I. unit of spring constant is...",
+      o: { A: "N", B: "Nm", C: "Nm⁻¹", D: "Nm⁻²" },
+      a: "C"
+    },
+    {
+      q: "To get the elongation e in Hooke's experiment of elasticity, where L₁ is the initial length and L₂ is the new length. The equation is...",
+      o: { A: "e = L₂ - L₁", B: "e = L₁ - L₂", C: "e = L₁ + L₂", D: "e = L₁ / L₂" },
+      a: "A"
+    },
+    {
+      q: "The change in velocity of a body at a particular time is known as...",
+      o: { A: "Instantaneous velocity", B: "Instantaneous speed", C: "Instantaneous acceleration", D: "Free-fall motion" },
+      a: "C"
+    },
+    {
+      q: "If two vectors are represented thus: A = 5i + 2j + k and B = 2i + 4j - 3k. Find A · B.",
+      o: { A: "13", B: "15", C: "17", D: "-13" },
+      a: "B"
+    },
+    {
+      q: "An object of mass 50 Kg is projected with a velocity of 20 ms⁻¹ at an angle of 60° to the horizontal. Calculate the time of flight.",
+      o: { A: "3.46 s", B: "2.0 s", C: "1.73 s", D: "1.0 s" },
+      a: "A"
+    },
+    {
+      q: "______ is defined as the process used to check the validity of a specific equation in mechanics.",
+      o: { A: "Uncertainty", B: "Dimensional analysis", C: "Motion analysis", D: "Newton's equations of motion" },
+      a: "B"
+    },
+    {
+      q: "The independent variable in the equation F = ke is...",
+      o: { A: "F", B: "k", C: "e", D: "None of the above" },
+      a: "C"
+       }
+      ]
 
         
 };
