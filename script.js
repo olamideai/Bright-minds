@@ -27,6 +27,9 @@ const QUESTION_BANK = {
 };
 
 const SUBJECT_TIME = {
+   "PHY 101/107 (1)": 60 * 15,  
+  "PHY 101/107 (2)": 60 * 15,   
+  "PHY 101/107 (3)": 60 * 15    
   
 };
 
