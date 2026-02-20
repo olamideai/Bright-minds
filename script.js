@@ -1196,9 +1196,9 @@ bootstrap();
   const progress = ((currentIndex + 1) / questions.length) * 100;
   document.getElementById("progressBar").style.width = progress + "%";
    }
-/* ===============================
+/*===============================
  20. FOOTER MESSAGE 
-================================ */
+================================*/
 
 const footerMessages = [
   '🌙 Ramadan Kareem ✨',
