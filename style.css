@@ -405,6 +405,13 @@ h1 {
   background: linear-gradient(90deg, var(--progress-start), var(--progress-end));
   transition: width 0.25s ease-in-out;
 }
+
+/* Make footer content relative so text stays above stars */
+.footer-content {
+  position: relative;
+  z-index: 2; /* above stars and moon */
+}
+
 /* Floating stars */
 .stars {
   position: absolute;
@@ -413,6 +420,7 @@ h1 {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: 1; /* behind text */
   background: transparent;
 }
 
@@ -445,11 +453,12 @@ h1 {
   height: 15px;
   border-radius: 50%;
   background: gold;
-  box-shadow: -5px 0 0 0 #0f2027 inset; /* cuts out the moon crescent */
+  box-shadow: -5px 0 0 0 #0f2027 inset;
+  z-index: 1; /* behind text */
   animation: floatMoon 3s ease-in-out infinite alternate;
 }
 
 @keyframes floatMoon {
   0% { transform: translateY(0); }
   100% { transform: translateY(-5px); }
-  }
+}
