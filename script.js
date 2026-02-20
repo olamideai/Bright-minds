@@ -1204,16 +1204,15 @@ const footerMessages = [
   '🌙 Ramadan Kareem ✨',
   'May Allah accept our fast and prayers 🤲',
   'Designed and powered by <span class="fancy-name">𝓞𝓵𝓪𝓶𝓲𝓭𝓮</span>',
-  
 ];
 
-let currentIndex = 0;
+let footerIndex = 0; // ← Use a separate variable for footer
 
 setInterval(() => {
-  currentIndex++;
+  footerIndex++;
 
-  if (currentIndex >= footerMessages.length) {
-    currentIndex = 0;
+  if (footerIndex >= footerMessages.length) {
+    footerIndex = 0;
   }
 
   const footerText = document.getElementById("footer-text");
@@ -1221,8 +1220,8 @@ setInterval(() => {
   footerText.style.opacity = "0";
 
   setTimeout(() => {
-    footerText.innerHTML = footerMessages[currentIndex];
+    footerText.innerHTML = footerMessages[footerIndex];
     footerText.style.opacity = "1";
   }, 500);
 
-}, 5000);
+}, 2000;
