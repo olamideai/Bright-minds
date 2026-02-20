@@ -405,3 +405,51 @@ h1 {
   background: linear-gradient(90deg, var(--progress-start), var(--progress-end));
   transition: width 0.25s ease-in-out;
 }
+/* Floating stars */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: transparent;
+}
+
+.stars::before, .stars::after {
+  content: "✦ ✧ ✦ ✧ ✦ ✧";
+  position: absolute;
+  font-size: 0.8rem;
+  color: #fffacd;
+  animation: floatStars 5s linear infinite;
+}
+
+.stars::after {
+  top: 20px;
+  left: 50%;
+  animation-delay: 2.5s;
+}
+
+@keyframes floatStars {
+  0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50% { transform: translateY(-15px) translateX(10px); opacity: 0.4; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.8; }
+}
+
+/* Crescent Moon */
+.crescent {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: gold;
+  box-shadow: -5px 0 0 0 #0f2027 inset; /* cuts out the moon crescent */
+  animation: floatMoon 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatMoon {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+  }
