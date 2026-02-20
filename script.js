@@ -10,7 +10,7 @@ let studentname = "";
 let currentSubject = "";
 let questions = [];
 let currentIndex = 0;
-let answex: "null;
+let answers= {};
 let timeLeft = 0;
 let quizCompleted = false;
 
