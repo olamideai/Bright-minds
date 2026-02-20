@@ -1220,5 +1220,5 @@ document.addEventListener("DOMContentLoaded", () => {
       footerText.style.opacity = "1";
     }, 300);
 
-  }, 2000); // switches every 2 seconds
+  }, 3500); // switches every 2 seconds
 });
