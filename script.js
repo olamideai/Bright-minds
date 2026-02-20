@@ -1196,3 +1196,33 @@ bootstrap();
   const progress = ((currentIndex + 1) / questions.length) * 100;
   document.getElementById("progressBar").style.width = progress + "%";
    }
+/*================================
+ 20. FOOTER MESSAGE 
+================================*/
+
+const footerMessages = [
+  '🌙 Ramadan Kareem ✨',
+  'May Allah accept our fast and prayers 🤲',
+  'Designed and powered by <span class="fancy-name">𝓞𝓵𝓪𝓶𝓲𝓭𝓮</span>',
+  
+];
+
+let currentIndex = 0;
+
+setInterval(() => {
+  currentIndex++;
+
+  if (currentIndex >= footerMessages.length) {
+    currentIndex = 0;
+  }
+
+  const footerText = document.getElementById("footer-text");
+
+  footerText.style.opacity = "0";
+
+  setTimeout(() => {
+    footerText.innerHTML = footerMessages[currentIndex];
+    footerText.style.opacity = "1";
+  }, 500);
+
+}, 5000);
