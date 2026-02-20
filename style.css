@@ -406,13 +406,14 @@ h1 {
   transition: width 0.25s ease-in-out;
 }
 
-/* Make footer content relative so text stays above stars */
+
+/* Make footer content above stars */
 .footer-content {
   position: relative;
-  z-index: 2; /* above stars and moon */
+  z-index: 2; /* text above stars */
 }
 
-/* Floating stars */
+/* Single floating star layer */
 .stars {
   position: absolute;
   top: 0;
@@ -421,30 +422,21 @@ h1 {
   height: 100%;
   pointer-events: none;
   z-index: 1; /* behind text */
-  background: transparent;
-}
-
-.stars::before, .stars::after {
-  content: "✦ ✧ ✦ ✧ ✦ ✧";
-  position: absolute;
   font-size: 0.8rem;
   color: #fffacd;
+  content: "✦ ✧ ✦ ✧ ✦ ✧";
+  white-space: nowrap;
   animation: floatStars 5s linear infinite;
 }
 
-.stars::after {
-  top: 20px;
-  left: 50%;
-  animation-delay: 2.5s;
-}
-
+/* Animate stars */
 @keyframes floatStars {
   0% { transform: translateY(0) translateX(0); opacity: 0.8; }
   50% { transform: translateY(-15px) translateX(10px); opacity: 0.4; }
   100% { transform: translateY(0) translateX(0); opacity: 0.8; }
 }
 
-/* Crescent Moon */
+/* Crescent Moon (optional) */
 .crescent {
   position: absolute;
   top: 5px;
@@ -454,7 +446,7 @@ h1 {
   border-radius: 50%;
   background: gold;
   box-shadow: -5px 0 0 0 #0f2027 inset;
-  z-index: 1; /* behind text */
+  z-index: 1;
   animation: floatMoon 3s ease-in-out infinite alternate;
 }
 
