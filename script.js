@@ -6,7 +6,7 @@
 /* ===============================
    1. GLOBAL VARIABLES & STATE
 ==================================*/
-let currentname = "";
+let studentname = "";
 let currentSubject = "";
 let questions = [];
 let currentIndex = 0;
