@@ -1200,25 +1200,25 @@ bootstrap();
  20. FOOTER MESSAGE 
 ================================*/
 
-const footerMessages = [
-  '🌙 Ramadan Kareem ✨',
-  'May Allah accept our fast and prayers 🤲',
-  'Designed and powered by <span class="fancy-name">𝓞𝓵𝓪𝓶𝓲𝓭𝓮</span>'
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const footerMessages = [
+    '🌙 Ramadan Kareem ✨',
+    'May Allah accept our fast and prayers 🤲',
+    'Designed and powered by <span class="fancy-name">𝓞𝓵𝓪𝓶𝓲𝓭𝓮</span>'
+  ];
 
-let footerIndex = 0; // <-- separate from quiz currentIndex
+  let footerIndex = 0;
 
-const footerText = document.getElementById("footer-text");
+  const footerText = document.getElementById("footer-text");
 
-setInterval(() => {
-  // fade out
-  footerText.style.opacity = "0";
+  setInterval(() => {
+    footerText.style.opacity = "0";
 
-  // after 300ms, change text and fade in
-  setTimeout(() => {
-    footerIndex = (footerIndex + 1) % footerMessages.length;
-    footerText.innerHTML = footerMessages[footerIndex];
-    footerText.style.opacity = "1";
-  }, 300);
+    setTimeout(() => {
+      footerIndex = (footerIndex + 1) % footerMessages.length;
+      footerText.innerHTML = footerMessages[footerIndex];
+      footerText.style.opacity = "1";
+    }, 300);
 
-}, 2000); // <-- switches every 2 seconds
+  }, 2000); // switches every 2 seconds
+});
