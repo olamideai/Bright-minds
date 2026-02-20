@@ -19,7 +19,18 @@ let quizCompleted = false;
    👉 You can add more subjects
 ================================ */
 const QUESTION_BANK = {
-"PHY 101/107 (1)": [],
+"PHY 101/107 (1)": [
+   {
+      q: "A car accelerates uniformly from rest to 20 m/s in 5 seconds. Calculate the acceleration.",
+      o: { 
+        A: "100 m/s²", 
+        B: "4 m/s²", 
+        C: "15 m/s²", 
+        D: "0.25 m/s²" 
+      },
+      a: "B"
+   }
+],
 "PHY 101/107 (2)": [],
 "PHY 101/107 (3)": []
 
