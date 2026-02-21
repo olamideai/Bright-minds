@@ -837,13 +837,7 @@ const SUBJECT_TIME = {
   
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  const userLoggedIn = localStorage.getItem("userLoggedIn");
-  if (!userLoggedIn) {
-    Object.values(pages).forEach(p => p.classList.add("hide"));
-    document.getElementById("authPage").classList.remove("hide");
-  }
-});
+
 
 /* ===============================
    3. DOM ELEMENTS
