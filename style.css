@@ -454,3 +454,77 @@ h1 {
   0% { transform: translateY(0); }
   100% { transform: translateY(-5px); }
 }
+
+/* AUTH PAGE STYLING */
+#authPage {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,255,20,0.5);
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #222;
+  color: #39ff14;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #39ff14;
+  color: #111;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #39ff14;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.hide {
+  display: none;
+}
