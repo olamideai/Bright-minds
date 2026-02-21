@@ -36,6 +36,34 @@
   </head>
 <body>
 
+  <!-- LOGIN / SIGNUP PAGE -->
+<section id="authPage" class="card">
+  <div class="auth-tabs">
+    <button class="tab-btn active" id="showLogin">Login</button>
+    <button class="tab-btn" id="showSignup">Create Account</button>
+  </div>
+
+  <!-- LOGIN FORM -->
+  <div id="loginForm" class="auth-form">
+    <h2>Login</h2>
+    <input id="loginEmail" class="input" type="email" placeholder="Email Address">
+    <input id="loginPassword" class="input" type="password" placeholder="Password">
+    <button class="btn" id="loginBtn">Login</button>
+    <p id="loginError" class="error-msg"></p>
+  </div>
+
+  <!-- SIGNUP FORM -->
+  <div id="signupForm" class="auth-form hide">
+    <h2>Create Account</h2>
+    <input id="signupName" class="input" type="text" placeholder="Full Name">
+    <input id="signupEmail" class="input" type="email" placeholder="Email Address">
+    <input id="signupPassword" class="input" type="password" placeholder="Create Password">
+    <input id="signupConfirmPassword" class="input" type="password" placeholder="Confirm Password">
+    <button class="btn" id="signupBtn">Create Account</button>
+    <p id="signupError" class="error-msg"></p>
+  </div>
+      </section>
+
 <div class="container">
 
   <!-- Sidebar for History -->
@@ -151,6 +179,7 @@
 <!-- JS FILES (ORDER MATTERS) -->
 <script src="script.js"></script>
 <script src="historyToggle.js"></script>
+ <script type="module" src="auth.js"></script>
 
   <footer class="footer">
   <div class="footer-content">
