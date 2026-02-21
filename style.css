@@ -455,7 +455,7 @@ h1 {
   100% { transform: translateY(-5px); }
 }
 
-/* AUTH PAGE STYLING */
+/* ------------------ LOGIN / SIGNUP ------------------ */
 #authPage {
   max-width: 400px;
   margin: 50px auto;
@@ -501,6 +501,8 @@ h1 {
   border: none;
   outline: none;
   font-size: 1rem;
+  background: rgba(0,0,0,.4);
+  color: #fff;
 }
 
 .btn {
@@ -527,4 +529,8 @@ h1 {
 
 .hide {
   display: none;
+}
+
+.show {
+  display: block;
 }
