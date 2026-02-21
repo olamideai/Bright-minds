@@ -5,27 +5,7 @@
 
 /* ===============================
    1. GLOBAL VARIABLES & STATE
-==================================*/
-
-// ----------------------
-// Show auth page by default if not logged in
-// ----------------------
-window.addEventListener('DOMContentLoaded', () => {
-  const userLoggedIn = localStorage.getItem("userLoggedIn");
-  if (!userLoggedIn) {
-    Object.values(pages).forEach(p => p.classList.add("hide"));
-    document.getElementById("authPage").classList.remove("hide");
-  }
-});
-
-const pages = {
-  home: document.getElementById("home"),
-  name: document.getElementById("namePage"),
-  subject: document.getElementById("subjectPage"),
-  quiz: document.getElementById("quizPage"),
-  result: document.getElementById("resultPage"),
-  review: document.getElementById("reviewPage")
-};
+================================== */
 
 let studentname = "";
 let currentSubject = "";
@@ -856,6 +836,14 @@ const SUBJECT_TIME = {
   "PHY 101/107 (3)": 60 * 15    
   
 };
+
+window.addEventListener('DOMContentLoaded', () => {
+  const userLoggedIn = localStorage.getItem("userLoggedIn");
+  if (!userLoggedIn) {
+    Object.values(pages).forEach(p => p.classList.add("hide"));
+    document.getElementById("authPage").classList.remove("hide");
+  }
+});
 
 /* ===============================
    3. DOM ELEMENTS
