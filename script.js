@@ -1168,14 +1168,8 @@ document.getElementById("backHomeBtn1").onclick = () => {
 /* ===============================
    17. APP BOOTSTRAP
 ================================ */
-function bootstrap() {
-  const userLoggedIn = localStorage.getItem("userLoggedIn");
-  
-  if (!userLoggedIn) {
-    showPage("authPage");
-    return;
-  }
 
+function bootstrap() {
   const data = JSON.parse(localStorage.getItem("quizState"));
   if (data && !data.quizCompleted) {
     if (confirm("Resume previous quiz?")) {
@@ -1185,17 +1179,18 @@ function bootstrap() {
       answers = data.answers;
       timeLeft = data.timeLeft;
       questions = QUESTION_BANK[currentSubject];
-
-      document.getElementById("quizSubject").textContent = currentSubject;
+       
+     document.getElementById("quizSubject").textContent = currentSubject;
       startTimer();
       renderQuestion();
       showPage("quiz");
-      return;
+      return; // Exit so we don't show home page
     }
   }
-
+  // Show home if no quiz saved or user cancels
   showPage("home");
 }
+
 bootstrap();
 /* ==================================
    18. PROGRESS BAR
