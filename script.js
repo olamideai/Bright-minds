@@ -127,8 +127,8 @@ const QUESTION_BANK = {
 
     {
       q: "For T = KLˣgʸ, the values of x and y are:",
-      o: { A: "1, 0", B: "½, −½", C: "½, ½", D: "1, −1" },
-      a: "B"
+      o: { A: "1, 0", B: "½, −½", C: "0, ½", D: "1, −1" },
+      a: "C"
     },
 
     {
@@ -212,8 +212,8 @@ const QUESTION_BANK = {
       a: "B"
     },
     {
-      q: "Power developed (100 N at 30 m/s):",
-      o: { A: "2000 W", B: "3000 W", C: "4000 W", D: "5000 W" },
+      q: "A car travelling at 30 ms-¹ overcomes a frictional force of 100 N while moving, calculate the power developed by the engine. (1 hp = 0.75kW).:",
+      o: { A: "2000 W", B: "3000 W or 4hp", C: "4000 W", D: "5000 W" },
       a: "B"
     },
     {
@@ -238,7 +238,7 @@ const QUESTION_BANK = {
     },
     {
       q: "Acceleration formula is:",
-      o: { A: "(v−u)/t", B: "(u−v)/t", C: "(2v−u)/t", D: "(v+u)/t" },
+      o: { A: "(v−u)/t", B: "(u−v)/t C: "(2v−u)/t", D: "(v+u)/t" },
       a: "A"
     },
     {
@@ -593,7 +593,7 @@ const QUESTION_BANK = {
     {
       q: "The period of oscillation of a simple pendulum is related to its length L and acceleration g by T = k L^x g^y. Determine the value of x and y where k is a constant.",
       o: { A: "1/2, -1/2", B: "-1/2, 1/2", C: "0, 1/2", D: "1/2, 0" },
-      a: "A"
+      a: "C"
     },
     {
       q: "Given that the period of oscillation of a pendulum is given by T = k m^x L^y g^z where k is a constant. Find the value of x, y and z.",
