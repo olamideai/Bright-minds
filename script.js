@@ -238,7 +238,7 @@ const QUESTION_BANK = {
     },
     {
       q: "Acceleration formula is:",
-      o: { A: "(v−u)/t", B: "(u−v)/t C: "(2v−u)/t", D: "(v+u)/t" },
+      o: { A: "(v−u)/t", B: "(u−v)/t", C: "(2v−u)/t", D: "(v+u)/t" },
       a: "A"
     },
     {
