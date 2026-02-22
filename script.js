@@ -212,7 +212,7 @@ const QUESTION_BANK = {
       a: "B"
     },
     {
-      q: "A car travelling at 30 ms-¹ overcomes a frictional force of 100 N while moving, calculate the power developed by the engine. (1 hp = 0.75kW).:",
+      q: "A car travelling at 30 ms-¹ overcomes a frictional force of 100 N while moving, calculate the power developed by the engine. (1 hp = 0.75kW):",
       o: { A: "2000 W", B: "3000 W or 4hp", C: "4000 W", D: "5000 W" },
       a: "B"
     },
