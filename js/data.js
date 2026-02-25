@@ -15,17 +15,15 @@ export const QUESTION_BANK = {
   
   "PHY 101/107 (2)": [
     // All 50 questions from set 2
-  ],
-  
-  "PHY 101/107 (3)": [
-    // All 50 questions from set 3
   ]
+  
+  
 };
 
 export const SUBJECT_TIME = {
   "PHY 101/107 (1)": 900,  // 15 minutes in seconds
   "PHY 101/107 (2)": 900,
-  "PHY 101/107 (3)": 900
+  
 };
 
 export const SUBJECT_INFO = {
