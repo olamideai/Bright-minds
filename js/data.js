@@ -22,7 +22,7 @@ export const QUESTION_BANK = {
 
 export const SUBJECT_TIME = {
   "PHY 101/107 (1)": 900,  // 15 minutes in seconds
-  "PHY 101/107 (2)": 900,
+  "PHY 101/107 (2)": 900
   
 };
 
@@ -36,12 +36,6 @@ export const SUBJECT_INFO = {
   "PHY 101/107 (2)": {
     title: "Physics 101/107 (Set 2)",
     description: "Waves, Motion & Forces",
-    questions: 50,
-    time: "15 mins"
-  },
-  "PHY 101/107 (3)": {
-    title: "Physics 101/107 (Set 3)",
-    description: "Experiments, Pendulum & Hooke's Law",
     questions: 50,
     time: "15 mins"
   }
