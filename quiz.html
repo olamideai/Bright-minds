@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Minds Quiz</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <span class="brand-text">Bright Minds</span>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+      <div class="user-info">
+        <span id="userName">User</span>
+        <button class="btn btn-small" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="quiz.html" class="nav-item active">📝 Take Quiz</a>
+      <a href="history.html" class="nav-item">📊 My History</a>
+      <a href="dashboard.html" class="nav-item">🏆 Leaderboard</a>
+      <a href="#" class="nav-item" onclick="logout()">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-container">
+    <!-- HOME -->
+    <section id="homeSection" class="card">
+      <div class="welcome-banner">
+        <h1 id="welcomeName">Welcome!</h1>
+        <p class="stats-preview">You've completed <span id="totalAttempts">0</span> quizzes</p>
+      </div>
+      
+      <div class="quick-actions">
+        <button class="btn btn-large btn-primary" onclick="showSection('subject')">🚀 Start New Quiz</button>
+        <button class="btn btn-large" onclick="location.href='history.html'">📈 View History</button>
+      </div>
+
+      <div class="recent-activity">
+        <h3>Recent Activity</h3>
+        <div id="recentList" class="activity-list">
+          <p class="empty-state">No recent quizzes. Start your first one!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECT SELECTION -->
+    <section id="subjectSection" class="card hidden">
+      <h2>Select Subject</h2>
+      <p class="subtitle">Choose a subject to begin</p>
+      <div class="subjects-grid" id="subjectGrid"></div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+        <button class="btn btn-secondary" onclick="showSection('home')">Back</button>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quizSection" class="card hidden">
+      <div class="quiz-header">
+        <div class="quiz-info">
+          <h2 id="quizSubject">Subject</h2>
+          <span class="question-counter" id="questionCounter">1/50</span>
+        </div>
+        <div class="timer" id="timer">15:00</div>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="progress-text" id="progressText">0%</span>
+      </div>
+
+      <div class="question-container">
+        <div class="question-text" id="questionText"></div>
+        <div class="options-grid" id="optionsGrid"></div>
+      </div>
+
+      <div class="quiz-controls">
+        <button class="btn btn-nav" id="prevBtn" onclick="prevQuestion()">← Previous</button>
+        <button class="btn btn-flag" onclick="flagQuestion()" id="flagBtn">🚩 Flag</button>
+        <button class="btn btn-danger" onclick="confirmSubmit()">Submit</button>
+        <button class="btn btn-nav" id="nextBtn" onclick="nextQuestion()">Next →</button>
+      </div>
+
+      <div class="question-palette" id="questionPalette"></div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="resultSection" class="card hidden">
+      <div class="result-header">
+        <h2>Quiz Complete! 🎉</h2>
+        <p id="resultSubject" class="subject-name"></p>
+      </div>
+
+      <div class="result-stats">
+        <div class="stat-circle score-circle">
+          <span class="stat-value" id="scoreValue">0</span>
+          <span class="stat-label">Score</span>
+        </div>
+        <div class="stat-circle percent-circle">
+          <span class="stat-value" id="percentValue">0%</span>
+          <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="stat-circle time-circle">
+          <span class="stat-value" id="timeValue">0:00</span>
+          <span class="stat-label">Time Used</span>
+        </div>
+      </div>
+
+      <div class="performance-message" id="perfMessage"></div>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" onclick="reviewAnswers()">📋 Review</button>
+        <button class="btn" onclick="retakeQuiz()">🔁 Retake</button>
+        <button class="btn btn-secondary" onclick="goHome()">🏠 Home</button>
+      </div>
+    </section>
+
+    <!-- REVIEW -->
+    <section id="reviewSection" class="card hidden">
+      <h2>Answer Review</h2>
+      <div class="review-summary">
+        <span class="badge correct" id="correctCount">0 Correct</span>
+        <span class="badge wrong" id="wrongCount">0 Wrong</span>
+        <span class="badge skipped" id="skippedCount">0 Skipped</span>
+      </div>
+      <div class="review-list" id="reviewList"></div>
+      <button class="btn" onclick="showSection('result')">Back to Results</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="footer-text">Designed by <span class="fancy-name">𝓞𝓵𝓪𝓶𝓲𝓭𝓮</span></span>
+  </footer>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/quiz.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
+
