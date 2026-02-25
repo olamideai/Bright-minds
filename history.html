@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My History - Bright Minds</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <span class="brand-text">Bright Minds</span>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+      <button class="btn btn-small" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="quiz.html" class="nav-item">📝 Take Quiz</a>
+      <a href="history.html" class="nav-item active">📊 My History</a>
+      <a href="dashboard.html" class="nav-item">🏆 Leaderboard</a>
+      <a href="#" class="nav-item" onclick="logout()">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-container">
+    <div class="page-header">
+      <h1>📊 My Quiz History</h1>
+      <p>Track your progress over time</p>
+    </div>
+
+    <div class="stats-overview">
+      <div class="stat-card">
+        <h3>Total Quizzes</h3>
+        <p class="big-number" id="totalQuizzes">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Average Score</h3>
+        <p class="big-number" id="avgScore">0%</p>
+      </div>
+      <div class="stat-card">
+        <h3>Best Score</h3>
+        <p class="big-number" id="bestScore">0%</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Time</h3>
+        <p class="big-number" id="totalTime">0h</p>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <select id="subjectFilter" onchange="filterHistory()">
+        <option value="all">All Subjects</option>
+        <option value="PHY 101/107 (1)">PHY 101/107 (1)</option>
+        <option value="PHY 101/107 (2)">PHY 101/107 (2)</option>
+        <option value="PHY 101/107 (3)">PHY 101/107 (3)</option>
+      </select>
+      <select id="sortFilter" onchange="sortHistory()">
+        <option value="date-desc">Newest First</option>
+        <option value="date-asc">Oldest First</option>
+        <option value="score-desc">Highest Score</option>
+        <option value="score-asc">Lowest Score</option>
+      </select>
+    </div>
+
+    <div class="history-list" id="historyList"></div>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/history.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
+
