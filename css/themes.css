@@ -159,3 +159,111 @@ body {
   animation: fadeIn 0.5s ease-out;
 }
 
+/* Sidebar Navigation Styles */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: var(--radius-sm);
+  color: var(--text) !important;
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-item:hover, 
+.nav-item.active {
+  background: rgba(0, 229, 255, 0.1);
+  border-left-color: var(--neon);
+  color: var(--neon) !important;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header h3 {
+  color: var(--neon);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--neon);
+}
+
+/* Menu Button */
+.menu-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+/* Fix link colors */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px 20px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Error message styling */
+.error-message {
+  text-align: center;
+  color: var(--danger);
+  padding: 40px;
+  font-size: 1.1rem;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: var(--radius-sm);
+  margin: 20px 0;
+   }
+   
