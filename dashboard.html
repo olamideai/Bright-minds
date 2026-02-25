@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard - Bright Minds</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <span class="brand-text">Bright Minds</span>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+      <button class="btn btn-small" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="quiz.html" class="nav-item">📝 Take Quiz</a>
+      <a href="history.html" class="nav-item">📊 My History</a>
+      <a href="dashboard.html" class="nav-item active">🏆 Leaderboard</a>
+      <a href="#" class="nav-item" onclick="logout()">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-container">
+    <div class="page-header">
+      <h1>🏆 Leaderboard</h1>
+      <p>Top performers across all subjects</p>
+    </div>
+
+    <div class="leaderboard-tabs">
+      <button class="tab-btn active" onclick="switchTab('overall')">Overall</button>
+      <button class="tab-btn" onclick="switchTab('PHY 101/107 (1)')">PHY (1)</button>
+      <button class="tab-btn" onclick="switchTab('PHY 101/107 (2)')">PHY (2)</button>
+      <button class="tab-btn" onclick="switchTab('PHY 101/107 (3)')">PHY (3)</button>
+    </div>
+
+    <div class="podium" id="podium"></div>
+
+    <div class="leaderboard-table-container">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+    </div>
+
+    <div class="your-ranking" id="yourRanking">
+      <h3>Your Ranking</h3>
+      <div class="rank-card">
+        <span class="rank-position" id="userRank">#--</span>
+        <span class="rank-name" id="userRankName">You</span>
+        <span class="rank-score" id="userRankScore">0%</span>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
+
