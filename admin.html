@@ -6,7 +6,30 @@
   <title>Admin Dashboard - Bright Minds</title>
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/admin.css">
+  
+  <!-- FIX: Force sidebar on top -->
+  <style>
+    .sidebar {
+      position: fixed !important;
+      top: 70px !important;
+      left: 0 !important;
+      width: 280px !important;
+      height: calc(100vh - 70px) !important;
+      background: var(--card) !important;
+      border-right: 1px solid var(--border) !important;
+      transform: translateX(-100%) !important;
+      transition: transform 0.3s ease !important;
+      z-index: 9999 !important;
+      padding: 20px !important;
+      overflow-y: auto !important;
+    }
+    .sidebar.show {
+      transform: translateX(0) !important;
+      z-index: 10000 !important;
+    }
+  </style>
 </head>
+  
 <body>
   <nav class="top-nav">
     <div class="nav-brand">
