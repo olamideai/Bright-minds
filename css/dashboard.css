@@ -1,0 +1,377 @@
+@import url('themes.css');
+
+/* ================================
+   PAGE HEADER
+================================ */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--neon), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+}
+
+/* ================================
+   STATS OVERVIEW
+================================ */
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon);
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.big-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neon);
+}
+
+/* ================================
+   FILTER BAR
+================================ */
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-bar select {
+  padding: 12px 20px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ================================
+   HISTORY LIST
+================================ */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  border-color: var(--neon);
+  transform: translateX(5px);
+}
+
+.history-rank {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neon);
+  min-width: 50px;
+}
+
+.history-details h4 {
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.history-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.history-score {
+  text-align: center;
+}
+
+.score-percentage {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.score-fraction {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.history-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ================================
+   LEADERBOARD TABS
+================================ */
+.leaderboard-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  border-color: var(--neon);
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--neon);
+}
+
+/* ================================
+   PODIUM - COMPLETELY FIXED
+================================ */
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 40px;
+  height: 220px;
+  padding: 0 10px;
+}
+
+.podium-place {
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: var(--radius);
+  position: relative;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+}
+
+.podium-place.first {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  height: 220px;
+  order: 2;
+  z-index: 3;
+}
+
+.podium-place.second {
+  background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
+  color: #000;
+  height: 180px;
+  order: 1;
+  z-index: 2;
+}
+
+.podium-place.third {
+  background: linear-gradient(135deg, #cd7f32, #daa520);
+  color: #fff;
+  height: 150px;
+  order: 3;
+  z-index: 1;
+}
+
+.podium-rank {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+/* FIXED: Name display - now properly visible */
+.podium-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  width: 100%;
+  line-height: 1.3;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
+
+.podium-score {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* ================================
+   LEADERBOARD TABLE
+================================ */
+.leaderboard-table-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th {
+  background: var(--bg-secondary);
+  padding: 15px;
+  text-align: left;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.leaderboard-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.leaderboard-table tr:hover {
+  background: rgba(0, 229, 255, 0.05);
+}
+
+.leaderboard-table tr.current-user {
+  background: rgba(0, 229, 255, 0.15);
+  border-left: 3px solid var(--neon);
+}
+
+.rank-number {
+  font-weight: 700;
+  color: var(--neon);
+  font-size: 1.2rem;
+}
+
+/* ================================
+   YOUR RANKING
+================================ */
+.your-ranking {
+  background: var(--card);
+  border: 2px solid var(--neon);
+  border-radius: var(--radius);
+  padding: 25px;
+  text-align: center;
+}
+
+.your-ranking h3 {
+  margin-bottom: 15px;
+  color: var(--neon);
+}
+
+.rank-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+}
+
+.rank-position {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neon);
+}
+
+.rank-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rank-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .history-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .podium {
+    height: 180px;
+    gap: 10px;
+  }
+  
+  .podium-place {
+    width: 110px;
+    padding: 10px 5px;
+  }
+  
+  .podium-place.first { height: 180px; }
+  .podium-place.second { height: 150px; }
+  .podium-place.third { height: 120px; }
+  
+  .podium-name {
+    font-size: 0.75rem;
+  }
+  
+  .podium-score {
+    font-size: 1.2rem;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
