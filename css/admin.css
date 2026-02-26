@@ -66,14 +66,7 @@
   color: white;
 }
 
-/* Sidebar */
-.sidebar {
-  z-index: 1000 !important;
-}
 
-.sidebar.show {
-  z-index: 1001 !important;
-}
 
 /* Stats Cards */
 .stats-grid {
