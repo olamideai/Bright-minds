@@ -542,8 +542,17 @@ window.deleteAttempt = async function(attemptId) {
 
 // ==================== UI ====================
 window.toggleSidebar = function() {
-  document.getElementById('sidebar').classList.toggle('show');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+  
+  sidebar.classList.toggle('show');
+  
+  // Toggle overlay
+  if (overlay) {
+    overlay.classList.toggle('active');
+  }
 };
+
 
 window.logout = async function() {
   if (unsubscribeLiveFeed) unsubscribeLiveFeed();
