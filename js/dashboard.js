@@ -119,7 +119,8 @@ function renderLeaderboard(attempts) {
   // Render table
   attempts.forEach((attempt, index) => {
     const row = document.createElement('tr');
-    const isCurrentUser = attempt.userId === currentUser?.uid;
+    const isCurrentUser = currentUser && attempt.userId === currentUser.uid;
+    
     
     if (isCurrentUser) row.classList.add('current-user');
     
