@@ -327,4 +327,43 @@
     font-size: 0.9rem;
   }
 }
+/* Fix podium name display */
+.podium-name {
+  font-weight: 700;
+  font-size: 0.9rem;  /* Slightly smaller */
+  margin-bottom: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;  /* Add ... if too long */
+  white-space: nowrap;      /* Keep on one line */
+  line-height: 1.2;
+  padding: 0 5px;
+}
 
+/* Make podium boxes slightly wider */
+.podium-place {
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--radius);
+  position: relative;
+  width: 140px;  /* Increased from 120px */
+}
+
+/* Adjust font sizes for better fit */
+.podium-place.first {
+  height: 200px;
+}
+
+.podium-place.second,
+.podium-place.third {
+  height: 160px;
+}
+
+.podium-place .podium-name {
+  font-size: 0.85rem;
+  word-wrap: break-word;     /* Allow breaking if needed */
+  white-space: normal;       /* Allow multiple lines */
+  max-height: 2.4em;         /* Limit to 2 lines */
+  line-height: 1.2;
+  }
+  
