@@ -43,7 +43,7 @@ async function loadLeaderboard(type) {
     let attempts = [];
     
     if (type === 'overall') {
-      // Get all attempts, we'll filter for best per user
+      // Query for overall leaderboard
       const q = query(
         collection(db, 'attempts'),
         orderBy('percentage', 'desc'),
@@ -59,9 +59,9 @@ async function loadLeaderboard(type) {
           userBest.set(data.userId, { id: doc.id, ...data });
         }
       });
-      attempts = Array.from(userBest.values());
+      attempts = Array.from(userBest.values()).slice(0, 20);
     } else {
-      // Get attempts for specific subject
+      // Query for specific subject
       const q = query(
         collection(db, 'attempts'),
         where('subject', '==', type),
@@ -73,6 +73,18 @@ async function loadLeaderboard(type) {
         attempts.push({ id: doc.id, ...doc.data() });
       });
     }
+    
+    renderLeaderboard(attempts);
+    
+  } catch (error) {
+    console.error('Leaderboard error:', error);
+    document.getElementById('leaderboardBody').innerHTML = 
+      `<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--danger);">
+        Error: ${error.message}
+       </td></tr>`;
+  }
+}
+
     
     renderLeaderboard(attempts.slice(0, 20));
     
