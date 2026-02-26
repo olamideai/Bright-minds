@@ -48,21 +48,28 @@ async function loadStats() {
 }
 
 async function loadHistory() {
-  const q = query(
-    collection(db, 'attempts'),
-    where('userId', '==', currentUser.uid),
-    orderBy('submittedAt', 'desc')
-  );
-  
-  const snapshot = await getDocs(q);
-  allAttempts = [];
-  
-  snapshot.forEach(doc => {
-    allAttempts.push({ id: doc.id, ...doc.data() });
-  });
-  
-  renderHistory(allAttempts);
+  try {
+    const q = query(
+      collection(db, 'attempts'),
+      where('userId', '==', currentUser.uid),
+      orderBy('submittedAt', 'desc')
+    );
+    
+    const snapshot = await getDocs(q);
+    allAttempts = [];
+    
+    snapshot.forEach(doc => {
+      allAttempts.push({ id: doc.id, ...doc.data() });
+    });
+    
+    renderHistory(allAttempts);
+  } catch (error) {
+    console.error('History error:', error);
+    document.getElementById('historyList').innerHTML = 
+      `<p class="empty-state" style="color:var(--danger)">Error loading history: ${error.message}</p>`;
+  }
 }
+
 
 function renderHistory(attempts) {
   const list = document.getElementById('historyList');
