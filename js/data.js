@@ -203,7 +203,7 @@ export const SUBJECT_INFO = {
   "MTH 101": {
     title: "MTH 101",
     description: "MTH 101 (App Testing) Question",
-    questions: 25,
+    questions: 33,
     time: "10 mins"
   }
 };
