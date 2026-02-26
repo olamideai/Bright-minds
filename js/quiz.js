@@ -481,7 +481,7 @@ async function loadRecentAttempts() {
       
       item.innerHTML = `
         <div>
-          <strong>${data.subjectTitle}</strong>
+          <strong>${data.subjectTitle || data.subject}</strong>
           <small>${date.toLocaleDateString()}</small>
         </div>
         <span class="score-percentage" style="color: ${data.percentage >= 60 ? 'var(--success)' : 'var(--danger)'}; font-weight: bold;">
@@ -492,9 +492,11 @@ async function loadRecentAttempts() {
     });
   } catch (error) {
     console.error('Error loading recent:', error);
-    document.getElementById('recentList').innerHTML = '<p class="empty-state">Error loading recent quizzes</p>';
+    document.getElementById('recentList').innerHTML = 
+      `<p class="empty-state" style="color:var(--danger)">Error: ${error.message}</p>`;
   }
 }
+
 
 window.toggleSidebar = function() {
   document.getElementById('sidebar').classList.toggle('show');
