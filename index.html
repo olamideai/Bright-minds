@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Minds Quiz - Login</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="logo">
+        <h1>🧠 BRIGHT MINDS QUIZ</h1>
+        <p>TASFUED E-exam/E-test Practice</p>
+      </div>
+
+      <div id="loginForm" class="form-section">
+        <h2>Welcome Back</h2>
+        <div class="error-message" id="errorMsg" style="display:none;"></div>
+        <div class="success-message" id="successMsg" style="display:none;"></div>
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        
+        <!-- Password Field with Show Toggle -->
+        <div class="password-wrapper">
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <label class="show-password-label">
+            <input type="checkbox" class="show-password" data-target="loginPassword"> Show
+          </label>
+        </div>
+        
+        <button class="btn btn-primary" onclick="login()">Sign In</button>
+        <p class="switch-text">Don't have an account? <a href="#" onclick="toggleForm('register')">Register</a></p>
+      </div>
+
+      <div id="registerForm" class="form-section hidden">
+        <h2>Create Account</h2>
+        <div class="error-message" id="regErrorMsg" style="display:none;"></div>
+        <input type="text" id="regName" placeholder="Full Name" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        
+        <!-- Password Field with Show Toggle -->
+        <div class="password-wrapper">
+          <input type="password" id="regPassword" placeholder="Password (min 6 chars)" required />
+          <label class="show-password-label">
+            <input type="checkbox" class="show-password" data-target="regPassword"> Show
+          </label>
+        </div>
+        
+        <!-- Confirm Password Field with Show Toggle -->
+        <div class="password-wrapper">
+          <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required />
+          <label class="show-password-label">
+            <input type="checkbox" class="show-password" data-target="regConfirmPassword"> Show
+          </label>
+        </div>
+        
+        <button class="btn btn-primary" onclick="register()">Sign Up</button>
+        <p class="switch-text">Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+      </div>
+
+      <div class="theme-toggle-auth">
+        <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
+
