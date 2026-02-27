@@ -96,6 +96,103 @@ async function loadAndReviewAttempt(attemptId) {
   }
 }
 
+
+// Check for announcements from admin
+async function checkAnnouncements() {
+  if (!currentUser) return;
+  
+  try {
+    const { query, collection, where, getDocs, updateDoc, doc, arrayUnion, limit } = 
+      await import("https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js");
+    
+    // Get announcements
+    const q = query(collection(db, 'announcements'), limit(5));
+    const snapshot = await getDocs(q);
+    
+    snapshot.forEach(async docSnap => {
+      const data = docSnap.data();
+      const readBy = data.readBy || [];
+      
+      // Show if user hasn't read it
+      if (!readBy.includes(currentUser.uid)) {
+        showAnnouncementPopup(data.message, data.sentByName || 'Admin', docSnap.id);
+      }
+    });
+    
+  } catch (error) {
+    console.error('Announcement error:', error);
+  }
+}
+
+// Show announcement popup
+function showAnnouncementPopup(message, from, announceId) {
+  // Create dark background
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+  `;
+  
+  // Create popup
+  const popup = document.createElement('div');
+  popup.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0b1020;
+    border: 2px solid #00e5ff;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 350px;
+    width: 90%;
+    z-index: 10000;
+    text-align: center;
+  `;
+  
+  popup.innerHTML = `
+    <div style="font-size: 2rem; margin-bottom: 10px;">📢</div>
+    <h3 style="color: #00e5ff; margin-bottom: 15px;">Announcement</h3>
+    <p style="color: #e8f1ff; margin-bottom: 10px; line-height: 1.5;">${message}</p>
+    <p style="color: #6b7a94; font-size: 0.85rem; margin-bottom: 20px;">From: ${from}</p>
+    <button id="dismissBtn" style="
+      background: #00e5ff;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+    ">Got it!</button>
+  `;
+  
+  document.body.appendChild(overlay);
+  document.body.appendChild(popup);
+  
+  // When user clicks button
+  document.getElementById('dismissBtn').onclick = async () => {
+    try {
+      const { updateDoc, doc, arrayUnion } = 
+        await import("https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js");
+      
+      // Mark as read
+      await updateDoc(doc(db, 'announcements', announceId), {
+        readBy: arrayUnion(currentUser.uid)
+      });
+    } catch (e) {
+      console.error(e);
+    }
+    
+    // Remove popup
+    popup.remove();
+    overlay.remove();
+  };
+    }
+  
+    
 auth.onAuthStateChanged(user => {
   if (!user) {
     window.location.href = 'index.html';
@@ -105,8 +202,10 @@ auth.onAuthStateChanged(user => {
   document.getElementById('userName').textContent = user.displayName || 'Student';
   document.getElementById('welcomeName').textContent = `Welcome, ${user.displayName || 'Student'}!`;
   loadUserStats();
-  initSubjectGrid();
+    initSubjectGrid();
+  checkAnnouncements(); // Add this line
 });
+
 
 function initSubjectGrid() {
   const grid = document.getElementById('subjectGrid');
