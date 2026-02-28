@@ -87,7 +87,7 @@ window.login = async function() {
     return;
   }
   
-  // Set loading state
+  // Set load state
   setButtonLoading('loginBtn', true, 'Signing In...');
   
   try {
